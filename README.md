@@ -25,7 +25,7 @@ https://bos.us.distfiles.macports.org/eina/eina-1.7.10.tar.bz2
 https://bos.us.distfiles.macports.org/edje/edje-1.7.10.tar.bz2
 https://bos.us.distfiles.macports.org/efreet/efreet-1.7.10.tar.bz2
 https://bos.us.distfiles.macports.org/embryo/embryo-1.7.10.tar.bz2
-
+https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/eeze-1.7.10.tar.bz2
 
 https://ppa.launchpadcontent.net/efl/trunk/ubuntu/pool/main/t/terminology/terminology_0.3.0-1ppa2~saucy.tar.gz
 https://github.com/borisfaure/terminology/archive/refs/tags/v0.1.0.zip
