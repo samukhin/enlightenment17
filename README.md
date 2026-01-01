@@ -1,7 +1,7 @@
 # enlightenment17
 Адаптированные исходники enlightenment17 под новые ubuntu
 
-Адаптировано под ubuntu 22.04 (24.04  пока ошибки с edje_cc при сборке пакетов)
+Адаптировано под ubuntu 22.04 (24.04  пока ошибки с edje_cc при сборке пакетов), собирается и с 1.7.9 и с 1.7.10, но есть небольшие проблемы с evas_generic_loaders
 Оригиналы в https://ppa.launchpadcontent.net/efl/trunk/ubuntu/pool/
 
 Ключевые изменения:
