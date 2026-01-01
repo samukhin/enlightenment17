@@ -41,8 +41,8 @@ https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/enlightenment-0.17.
 4. ecore
 5. embryo
 5. eio
-6. edje
-7. emotion
+6. edje - нужен для сборки ethumb
+7. emotion - нужен для сборки terminology
 8. edbus - нужен для сборки ethumb
 9. ethumb - нужен для сборки elementary
 10. efreet - нужен для сборки elementary
