@@ -41,12 +41,12 @@ https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/enlightenment-0.17.
 Порядок сборки:
 1. eina - нужен для сборки eet
 2. eet
-3. evas - нужен, чтобы сформировать ecore-evas, то есть для сборки ecore
+3. evas - нужен, чтобы сформировать ecore-evas, то есть для правильной сборки ecore
 4. ecore
 5. embryo
 5. eio
 6. edje - нужен для сборки ethumb
-7. emotion - нужен для сборки terminology
+7. emotion - нужен для сборки ethumb и terminology
 8. edbus - нужен для сборки ethumb
 9. ethumb - нужен для сборки elementary
 10. efreet - нужен для сборки elementary
@@ -55,3 +55,4 @@ https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/enlightenment-0.17.
 13. eeze - нужен для сборки e17
 14. evas-generic-loaders - нужен для установки e17
 15. e17
+
