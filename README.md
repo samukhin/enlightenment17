@@ -10,7 +10,9 @@
 - В ethumb исправлен "Source-Version" -> "source:Version"
 - Изменены compat с 6 до 7
 
-Ссылки скачивания исходников (ещё не всё проверено):
+Ссылки скачивания исходников (всё проверено):
+
+https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/evas_generic_loaders-1.7.10.tar.bz2
 https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/ethumb-1.7.10.tar.bz2
 https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/e_dbus-1.7.10.tar.bz2
 https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/emotion-1.7.10.tar.bz2
@@ -29,6 +31,8 @@ https://ppa.launchpadcontent.net/efl/trunk/ubuntu/pool/main/t/terminology/termin
 https://github.com/borisfaure/terminology/archive/refs/tags/v0.1.0.zip
 https://github.com/borisfaure/terminology/archive/refs/tags/v0.2.0.zip
 
+https://ppa.launchpadcontent.net/efl/trunk/ubuntu/pool/main/e/e17/e17_0.17.5-1ppa1~saucy.tar.gz
+https://archive.ubuntu.com/ubuntu/pool/universe/e/e17/e17_0.17.6-1.1.debian.tar.xz
 https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/enlightenment-0.17.6.tar.bz2
 
 
