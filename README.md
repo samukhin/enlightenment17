@@ -53,6 +53,6 @@ https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/enlightenment-0.17.
 11. elementary
 12. terminology
 13. eeze - нужен для сборки e17
-14. evas-generic-loaders - нужен для установки e17
+14. evas-generic-loaders - опционально нужен для установки e17
 15. e17
 
