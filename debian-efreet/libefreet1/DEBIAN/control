@@ -1,0 +1,22 @@
+Package: libefreet1
+Source: efreet
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 279
+Depends: libc6 (>= 2.34), libecore1 (>= 1.7.9), libeet1 (>= 1.2.3), libeina1 (>= 1.7.9-1ppa1~saucy)
+Section: libs
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: Library that implements freedesktop.org specs for use with E17/EFL
+ An implementation of several specifications from freedesktop.org intended for
+ use in Enlightenment DR17 (e17) and other applications using the Enlightenment
+ Foundation Libraries (EFL). Currently, the following specifications are
+ included:
+  - Base Directory
+  - Desktop Entry
+  - Icon Theme
+  - Menu
+ .
+ This package provides the libefreet0 and libefreet0-mime libraries, which
+ contains efreet-based functions for dealing with mime.

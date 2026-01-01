@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+unexport LANG
+
+CFLAGS += -fvisibility=hidden -O2
+LDFLAGS += -fvisibility=hidden
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	touch README
+	aclocal -I m4
+	autoheader
+	autoconf
+	libtoolize --copy --automake
+	automake --add-missing --copy --gnu
+	dh_auto_configure -- --disable-rpath
+
+override_dh_makeshlibs:
+	dh_makeshlibs -V
+
+override_dh_auto_clean:
+	-$(MAKE) maintainer-clean
+	rm -f README

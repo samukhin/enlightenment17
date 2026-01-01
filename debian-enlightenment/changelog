@@ -1,0 +1,571 @@
+e17 (1:0.17.5-1ppa1~saucy) saucy; urgency=low
+
+  * New upload matching current upstream stable release.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Tue, 05 Nov 2013 11:12:59 -0800
+
+e17 (1:0.17.2.1-1ppa1~saucy) saucy; urgency=low
+
+  * New upload matching current upstream stable release.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Sat, 20 Apr 2013 11:12:59 -0800
+
+e17 (1:0.17.1-1ppa1~saucy) saucy; urgency=low
+
+  * New upload matching current upstream stable release.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Sun, 03 Feb 2013 20:28:59 -0800
+
+e17 (1:0.17.0-1ppa1~saucy) saucy; urgency=low
+
+  * New 0.17 final release.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Fri, 21 Dec 2012 23:59:59 -0800
+
+e17 (0.17.0-omega-1ppa1~saucy) saucy; urgency=low
+
+  * New 'omega' release, with the following changelog:
+   - Translation updates
+   - Compile fixes on non-linux platforms
+   - Restoring default keybindings now restores all of the default keybindings
+   - Same as above for mouse wheel bindings
+   - Fixed a number of potential buffer overflows and memory leaks
+   - Even more wallpapers
+   - Tiling module now handles maximization of windows more effectively
+   - Improvements to Window Remembers config dialog
+   - Clock gadgets now scale the date
+   - Fixed issue where radio widgets could have no radio item toggled
+   - Pager config dialog now shows button names
+   - Tiling module improvements when moving/resizing tiled windows
+   - Improved RandR dialog
+   - Navigate menu's "Current Directory" now works correctly when activated on files and removable media
+   - Filemanager no longer loses icons which caused a DND operation failure
+   - Filemanager now properly handles DND operations where the target is the icon of a removable device
+   - Starting with an invalid configuration is now much less likely (nearly impossible) to result in a complete failure
+   - Triggering Everything repeatedly no longer causes a crash
+   - Refresh button on filemanager toolbar is now functional
+   - Scale config dialog now detects changes properly and closes on apply
+   - Shelf changes/deletions no longer create artifacts
+   - Gadgets on shelves no longer sometimes show the wrong style in menus
+   - Fixed crash when filemanager preview popup was present during directory refresh/change
+   - Fixed a number of issues which prevented various locales from functioning or detecting correctly
+   - Main applications menu no longer generates in a thread :(
+   - Filemanager toolbars can no longer trigger crashes when deleted
+   - Filemanager toolbars now store their position
+   - Filemanager now more capable of opening .desktop files linked to directories
+   - Filemanager toolbar path items now create and delete correctly
+   - Filemanager no longer allows renaming files into/onto directories and other files
+   - "Show files in menu" option removed from filemanager
+   - [THEME] Cursor icons
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Tue, 18 Dec 2012 15:28:59 -0800
+
+e17 (0.17.0-lucky-1ppa1~saucy) saucy; urgency=low
+
+  * New 'lucky' release, with the following changelog:
+   - EFL requirements now bumped to 1.7.3
+   - Translation updates
+   - Wallpaper previews now maintain aspect ratio when dialog is resized
+   - Backlight gadgets update themselves on backlight change
+   - Filemanager now capable of loading large directories more quickly
+   - Filemanager "New Directory" action renames files inline
+   - Menu item layout no longer resizes randomly
+   - Filemanager drag-n-drop no longer causes crashes in most scenarios
+   - Xmodmap settings no longer overwritten when changing keyboard layout
+   - Filemanager properly shows files again if a drag-n-drop operation fails or pauses
+   - Orientation changing on shelves no longer duplicates the shelf
+   - Evry file browsing now shows mime types more accurately
+   - Tons of small memory leaks fixed
+   - Theme selection dialog now shows actual preview of theme instead of wallpaper
+   - Temperature module no longer leaks fds on some platforms
+   - Pointer warping now more effective when changing desks
+   - "Share" button on screenshot dialog now leads to a confirmation dialog
+   - [THEME] Filemanager icons
+   - [THEME] Pixel border style removed
+   - [THEME] Pixel border style added
+   - [THEME] Pixel border style now has focused effect
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Fri, 14 Dec 2012 15:28:59 -0800
+
+e17 (0.17.0-gamma-1ppa1~saucy) saucy; urgency=low
+
+  * New gamma release, with the following changelog:
+   - Translation updates
+   - Clock and cpufreq gadgets now consume less cpu
+   - Slider widget can no longer explode the stack
+   - Backlight setting improved, now more reliable
+   - mkstemps no longer used; portability++
+   - "Really move" option in filemanager renamed to something more descriptive
+   - Resizable dialogs are now able to be maximized
+   - Scrollbars now hide in more cases where they should
+   - Dragging files to other applications from filemanager no longer causes file icon to disappear
+   - Filemanager toolbar path items delete when corresponding path is removed
+   - Mixer no longer causes a crash when pulseaudio is killed
+   - Navigate menu no longer crashes when repeatedly navigating to a directory which has no listable contents
+   - Tasks gadget no longer tries to delete its items repeatedly
+   - Systray icon scaling improved
+   - XDirectSave DND operations now work again
+   - "hicolor" icon theme automatically applied now when no theme is selected
+   - Fileselector no longer changes its entry text when changing directories
+   - Filemanager "New File" action no longer creates file with garbage content
+   - "Don't composite fullscreen windows" is now disabled by default
+   - Notifications no longer do anything (including crash) when received during desklock
+   - Gadgets module no longer crashes on unload and also correctly shows gadgets when loaded
+   - Read-only entry widgets are now actually read-only
+   - Filemanager no longer as hungry, saves some DND events for pager to enable drags on desktop pagers
+   - Removed some potentially troublesome settings from advanced Composite settings
+   - Systray now informs the user that it should not be placed on an invisible shelf
+   - Window moving/resizing (and other mouse-related events) no longer behave strangely in the presence of autohiding shelves
+   - Submenu item arrows now properly sized and aligned
+   - [THEME] Lots of icons
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Tue, 11 Dec 2012 16:28:59 -0800
+
+e17 (0.17.0-beta-1ppa1~saucy) saucy; urgency=low
+
+  * New beta release, with the following changelog:
+   - Translation updates
+   - Solaris build fixes
+   - Improved performance during secure deletion
+   - Various small memory leaks plugged
+   - Keyboard config now supports "evdev" as a model
+   - Pointer slide once again properly sets focus
+   - Various config dialogs once again resizable
+   - Icons no longer disappear after dragging them into external applications
+   - Navigate menu slightly reorganized, now also navigates relative to clicked icons
+   - Double clicking icons in filemanager with single click activation enabled no longer performs two opens
+   - Shelf autohide now functions properly in multi-monitor environments
+   - Shelf autohide more accurate when moving mouse from shelf into external application
+   - Resizing from bottom border now functional on applications which set aspect ratio (mplayer)
+   - Pager no longer sometimes loses windows with default theme
+   - Pager once again works as a desktop gadget with default theme
+   - Tiling module improvements when using Show Desktop action
+   - Xmodmap/Xresources/Xdefaults now loaded on restarts
+   - Fullscreening a maximized window no longer causes window's previous geometry to be lost
+   - Mixer much more reliable when using pulseaudio
+   - Various fds will no longer be passed to child processes
+   - Quickaccess module no longer crashes on windows which have no ICCCM name/class set
+   - Quickaccess module now functions correctly with windows which do not accept focus
+   - Illume no longer breaks executable tracking
+   - Wizard no longer hangs on first-run if efreet is not detected
+   - Systray icons now scale with shelf size
+   - [THEME] Illume
+   - [THEME] Temperature gadget text now readable
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Fri, 07 Dec 2012 16:28:59 -0800
+
+e17 (0.17.0-alpha8-1ppa1~saucy) saucy; urgency=low
+  
+  * New alpha 8 release, with the following changelog:
+   - Translation updates
+   - Language changes now always trigger a restart
+   - XDG paths should no longer contain duplicate entries
+   - Fileselector no longer fails to open some files
+   - First-run wizard no longer waits unnecessarily long on subsequent runs
+   - FreeBSD warning fixes
+   - Disabling tiling module now restores original border geometry
+   - Composite module now uses black as its client fill color
+   - Desktop gadgets no longer cause crashes when immediately deleted from the config dialog
+   - Connman network list now sizes based on a percentage of screen size
+   - Various memory leaks plugged
+   - Filemanager once again is able to open symlinks to directories using in-place opening
+   - Most config dialogs have been made non-resizable
+   - Everything will now hide on desklock
+   - enlightenment_start no longer ptraces while valgrinding
+   - More wallpapers added (Provided by Nicolas Beaumont http://www.nicolas-beaumont.fr/)
+   - Compile fixes for various E17 utilities
+   - Crash reduction in Everything launcher
+   - Keybindings config dialog no longer randomly changes bindings when scrolling quickly through list
+   - Filemanager windows no longer appear outside screen limits
+   - "Focus" option in window switcher config dialog now functions correctly
+   - Cut/Copy/Paste now function more correctly in certain text entries
+   - Menus are now limited to screen size
+   - Filemanager sidebar scrollbars no longer appear unnecessarily
+   - Mixer can now set volume to 100%
+   - Closing applications started by E17 no longer sometimes triggers a crash
+   - Pointer slide (to/from new windows) is now more reliable
+   - Revert focus now works correctly for mouse focus
+   - Pointer slide no longer sets focus during slide
+   - [THEME] Battery
+   - [THEME] Everything
+
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Tue, 04 Dec 2012 13:28:59 -0800
+
+e17 (0.17.0-alpha7-1ppa1~saucy) saucy; urgency=low
+
+  * New alpha 7 release, with the following changelog:
+   -Translation updates
+   -DND operations in the filemanager now crash less often
+   -Notification gadget euthanized: too buggy to live
+   -Gadget for fileman_opinfo shows a red light when its window wants attention
+   -Birthday module added (Happy birthday raster!)
+   -Extremely large menus no longer align improperly
+   -Gadget popups once again position themselves correctly for left/top shelves
+   -Desktop gadgets no longer cause a crash when rotating a monitor
+   -Shelf autohide no longer causes a crash when triggered during a monitor rotation
+   -RandR dialog now reopens when left open during an E restart
+   -System action dialogs have had various text improvements
+   -Filemanager windows no longer unset custom border styles
+   -Tories rejoice, the UK flag in the first-run wizard now displays correctly
+   -List items will be more often deselected as intended in some cases
+   -Shelves may now show slightly later after startup to avoid resizing their canvases
+   -DND operations on desktop gadgets are less likely to show an ugly icon while dragging
+   -Several memory leaks plugged
+   -A number of desktop gadget DND-related crashes fixed
+   -Connman network list is now larger and refreshes more regularly
+   -Birthday module removed
+   -Mixer module no longer sometimes causes magic failures on shutdown
+   -Application menus now update themselves when the corresponding menu file is changed
+   -Mixer module no longer sets volume to zero on first load
+   -Various small dialog text improvements
+   -First-run wizard now runs shutdown routines for its pages
+   -First-run wizard's first page no longer accidentally the whole second page
+   -First-run wizard is now less likely to skip pages at random
+   -First-run wizard no longer shows the same page repeatedly in some cases
+   -[THEME] Temperature module
+   -[THEME] Backlight gadget
+   -[THEME] Mixer module
+   -[THEME] First-run wizard button no longer animates on click when disabled
+ 
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Fri, 30 Nov 2012 15:28:59 -0800
+
+e17 (0.17.0-alpha6-1ppa1~saucy) saucy; urgency=low
+
+  * New alpha 6 release, with the following changelog:
+   -Translation updates
+   -AMD K10 temperature sensor support on OpenBSD
+   -Video file previews will now stutter less and respect tooltip boundaries more
+   -Battery module now crashes less on OpenBSD
+   -Icon resizing is now smoother
+   -Gadget menus can no longer cause crashes when the gadget is deleted
+   -Fileselector once again allows selection from directory previews
+   -Filemanager DND can no longer interfere with gadget DND to cause crashes
+   -Improved support for XDG_DESKTOP_DIR
+   -Filemanager no longer restores non-default desktop paths when desktop navigation mode is disabled
+   -Improvements/fixes to lost window warping behavior
+   -New ibar sources now copy from default source
+   -Right clicking on any part of a desktop gadget is now sufficient to disable move/resize
+   -Filemanager maximum thumbnail size config slider now more granular
+   -Module config dialog now updates when module states are externally toggled
+   -Connman wizard page now shows regardless of connman support, also disables connman module if support disabled
+   -First-run wizard now correctly updates after language changes
+   -First-run wizard button now reads "Please Wait" when it is disabled
+   -First-run wizard now has a page to (not) add a taskbar to the default shelf
+   -First-run wizard now unsets winlist pointer warping when "click" focus model is chosen
+   -First-run wizard now performs a more accurate wait when building XDG cache
+   -Edge bindings dialog can no longer crash when closed before its grab dialog
+   -Edge bindings dialog no longer allows blank bindings to be added
+   -Keybindings dialog no longer adds non-default ctrl+shift bindings when restoring default bindings
+   -Gadget popups will no longer sometimes obscure the source gadget if triggered on an offscreen gadget
+   -"Show Calendar" action renamed to "Toggle Calendar"
+   -Fileman Operations module now uses same infos as filemanager
+   -Password mode toggling in entry now works more effectively
+   -[THEME] Desktop gadget
+   -[THEME] RandR dialog
+   -[THEME] Notification module
+   -[THEME] Pixel borders fixed
+   -[THEME] Pixel borders allow drag resizing
+   -[THEME] Cpufreq gadget
+   -[THEME] Analog clock
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Tue, 27 Nov 2012 15:28:59 -0800
+
+e17 (0.17.0-alpha5-1ppa2~saucy) saucy; urgency=low
+
+  * Now depends on evas-generic-loaders (SVG support).
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Mon, 26 Nov 2012 10:28:59 -0800
+
+e17 (0.17.0-alpha5-1ppa1~saucy) saucy; urgency=low
+
+  * New alpha 5 release:
+   - More translation updates
+   - New default theme is more complete
+   - Entry widgets will no longer sometimes lock E when resizing
+   - First-run wizard is now smarter with regard to the signals it listens to
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Fri, 23 Nov 2012 10:28:59 -0800
+
+e17 (0.17.0-alpha4-1ppa2~saucy) saucy; urgency=low
+
+  * Upgrading minimum requirements to EFL 1.7.2 in order to FTBFS.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Thu, 22 Nov 2012 22:28:59 -0800
+
+e17 (0.17.0-alpha4-1ppa1~saucy) saucy; urgency=low
+
+  * New alpha 4 release:
+   - Translation updates
+   - Fixed submenu positioning bug
+   - Fixes for modal dialog windows (unbreaks image import dialog)
+   - .spec file improvements
+   - OSX compatibility fixes
+   - RandR dialog presents refresh rates in right click menu
+   - Further improvements to new default theme, particularly digital clock appearance
+   - Theme info menu item is now more clear
+   - Default theme now allows file renaming on longpress
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Tue, 20 Nov 2012 10:28:59 -0800
+
+e17 (0.17.0-alpha3-1ppa1~saucy) saucy; urgency=low
+
+  * New alpha release:
+   - Translation updates
+   - First-run wizard should now be more reliable at detecting applications
+   - Default theme now much more complete
+   - Mixer volume changing actions should no longer disappear
+   - Text file previews no longer contain trailing garbage
+   - Window geometry prior to maximization is now remembered across restarts
+   - Pulseaudio mixer should now disconnect properly when necessary
+   - Filemanager will no longer cause data to be lost when moving directories to other devices
+   - Window list menu items will now abbreviate properly
+   - Some menus (such as the Favorite Apps menu) will now place themselves more optimally
+   - Favorite Apps menu now preloads on startup to decrease time taken to display it
+   - Filemanager tab completion works again
+   - Mouse cursor will no longer be stuck in text mode when dragging out of an entry
+   - Wizard no longer attempts to set dummy keyboard layouts which can override manual layouts
+   - Wizard now sorts keyboard layouts alphabetically
+   - "Application Theme" settings panel renamed to "GTK Application Theme"
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Fri, 16 Nov 2012 10:28:59 -0800
+
+e17 (0.17.0-alpha2-1ppa8~saucy) saucy; urgency=low
+
+  * Less complaining about documentation.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Mon, 12 Nov 2012 10:28:59 -0800
+
+e17 (0.17.0-alpha2-1ppa7~saucy) saucy; urgency=low
+
+  * Now with the notification module being properly built.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Mon, 12 Nov 2012 10:28:59 -0800
+
+e17 (0.17.0-alpha2-1ppa6~saucy) saucy; urgency=low
+
+  * New build dependency: xcb-keysym
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Mon, 12 Nov 2012 10:28:59 -0800
+
+e17 (0.17.0-alpha2-1ppa5~saucy) saucy; urgency=low
+
+  * Use configure instead of manually generating stuff.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Mon, 12 Nov 2012 10:28:59 -0800
+
+e17 (0.17.0-alpha2-1ppa4~saucy) saucy; urgency=low
+
+  * One leftover, two leftovers...
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Mon, 12 Nov 2012 10:28:59 -0800
+
+e17 (0.17.0-alpha2-1ppa3~saucy) saucy; urgency=low
+
+  * Fixing build due to leftover install rule.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Mon, 12 Nov 2012 10:28:59 -0800
+
+e17 (0.17.0-alpha2-1ppa2~saucy) saucy; urgency=low
+
+  * Removing old dependency.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Mon, 12 Nov 2012 10:28:59 -0800
+
+e17 (0.17.0-alpha2-1ppa1~saucy) saucy; urgency=low
+
+  * New upload matching current upstream alpha release.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Mon, 12 Nov 2012 10:28:59 -0800
+
+e17 (0.16.999-1) unstable; urgency=low
+
+  * update to work with svn
+
+ -- Michael Bouchaud <michael@substantiel.fr>  Tue, 25 Jan 2011 17:20:08 +0100
+
+e17 (0.16.999.49898-1) unstable; urgency=low
+
+  * New upstream snapshot
+    - Should fix FTBFS on Hurd (Closes: #535775)
+  * Explicitly disable the connman module to work around autofoo bugs
+  * Switch to '3.0 (quilt)' source format
+  * Drop patches/02_fix_default_config_for_upgrades.diff, no longer
+    relevant
+  * Refresh patches/04_evry_fix_default_path_for_terminal.diff
+  * debian/rules: update svn snapshot version extraction from
+    configure.ac
+  * Remove enlightenment_fm_open from e17, the binary no longer exists
+  * Update e17.install with new modules
+  * Bump Standards-Version, no change required
+  * Remove Xavier Oswald from uploaders, he is no longer active
+  * e17: add Depends: dbus-x11 so that enlightenment_remote works
+    properly
+  * upload makes e17 installable again (Closes: #590309)
+
+ -- Albin Tonnerre <lutin@debian.org>  Tue, 27 Jul 2010 19:51:26 +0200
+
+e17 (0.16.999.063-1) unstable; urgency=low
+
+  * New upstream snapshot
+  * Add new modules to the install files
+  * Add debian/patches/04_evry_fix_default_path_for_terminal.diff:
+    - Use /usr/bin/x-terminal-emulator instead of hardcoding xterm
+  * Update my email address
+
+ -- Albin Tonnerre <lutin@debian.org>  Sat, 05 Dec 2009 12:56:10 +0100
+
+e17 (0.16.999.062-1) unstable; urgency=low
+
+  * New upstream snapshot
+  * Remove the 'System tools' entry in enlightenment-applications.menu, it's a
+    duplicate of the 'Settings' entry
+  * New patch 03_bind_XF86PowerOff_instead_of_Execute_in_illume.diff
+    - In illume, the poweroff action is bound to the Execute key. As there's
+      no such key in Debian, use XF86PowerOff instead (Closes: #538186)
+  * Update Standards-Version to 3.8.3
+  * Fix the short description for e17-dbg
+  * remove DEB_DH_STRIP_ARGS from debian/rules, since CDBS computes the name
+    of the debug package automatically
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Sat, 29 Aug 2009 21:41:31 +0200
+
+e17 (0.16.999.061-2) unstable; urgency=low
+
+  * Don't Build-Depend on libasound2-dev on non-linux architectures, fixing an
+    FTBFS. Thanks to Cyril Brulebois. (Closes: #536103)
+  * Move e17-dbg to the debug section
+  * Remove ununsed override: possible-gpl-code-linked-with-openssl
+  * Adjust the freqset binary path for the setuid-binary override
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Tue, 14 Jul 2009 21:16:57 +0200
+
+e17 (0.16.999.061-1) unstable; urgency=low
+
+  * New upstream snapshot
+  * Drop 03_config_panel_category_list_is_not_an_ilist.diff, applied upstream
+  * Add 01_menu_extra_path.patch:
+    - Previously patched in efreet. Allows the use of an e17-provided fallback
+      menu in case efreet doesn't find any.
+  * Update to Standards-Version 3.8.2, no change required
+  * Improve the e17-provided menu file, thanks Luca Capello (Closes: #532214)
+  * Update e17 deps following the evas engines rename
+  * Upload to unstable
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Wed, 24 Jun 2009 22:41:41 +0200
+
+e17 (0.16.999.060-1) experimental; urgency=low
+
+  * New upstream release
+    - update e17.install to add wifiget, provided with the illume module
+  * Bump Standards-Version, no change required.
+  * Remove build-dep on libedje-bin, now useless as libedje-dev depends on it
+  * Add debian/patches/03_config_panel_category_list_is_not_an_ilist.diff
+    - Cherry-pick from SVN r40508, fixes a potential issue due to
+      e_widget_ilist-related functions being called with an e_widget_toolbar as
+      argument
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Thu, 07 May 2009 13:54:43 +0200
+
+e17 (0.16.999.050+svn20090203-1) experimental; urgency=low
+
+  [Albin Tonnerre]
+  * New SVN snapshot
+    - Remove some patches, applied upstream:
+      + 01_install_internal-use_binaries_in_usr_lib_enlightenment.diff
+      + 03_fix_src-bin-makefile.diff
+      + 04_fix_e_fm_main_svn38418.diff
+    - control: tighten builddeps and depends of efl-dev
+    - Update dependency on libevas-engines
+    - e17.install: install binaries located in usr/lib/enlightenment/utils
+  * e17.install: Add missing illume dicts and keyboards (Closes: #513854)
+
+  [Luca Capello]
+  * debian/e17-data.install:
+    - do not install documentation duplicates (Closes: #513850)
+  * debian/e17.lintian-overrides.in:
+    - Add override for 'image-file-in-usr-lib' for illume keyboard images
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Sat, 07 Feb 2009 10:29:53 +0100
+
+e17 (0.16.999.050+svn20081207-2) experimental; urgency=low
+
+  * Update dependencies for new packages names
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Tue, 06 Jan 2009 21:08:29 +0100
+
+e17 (0.16.999.050+svn20081207-1) experimental; urgency=low
+
+  * Upstream SVN snapshot
+    - build-depend and make efl-dev depend on libeina-0.0.1a-dev
+  * Update {build,}dependencies to match the new EFL packages name
+  * Ship enlightenment.pc instead of enlightenment-config, as the latter is
+    now deprecated (Closes: #504293)
+  * Build-Depend on libasound2-dev to get the mixer module working
+    - Closes: #506847
+  * Make e17 depend on libedje-bin as this is necessary for e.g. changing the
+    background.
+  * No longer remove the wizard module from the package, as it is now usable
+  * Add debian/patches/02_fix_default_config_for_upgrades.diff:
+    - Add buttons for halt/shutdown/etc to the syscon module for the default
+      profile. Without that, users upgrading from older versions would have an
+      empty 'system' menu
+  * debian/patches/{03_fix_src-bin-makefile,04_fix_e_fm_main_svn38418}.diff:
+    - Cherry-pick patches from SVN to fix the file manager operations when it
+     is installed in /usr/lib/enlightenment
+  * debian/patches/01_install_internal-use_binaries_in_usr_lib_enlightenment.diff:
+    - update, as a new binary going in /usr/lib/enlightenment was introduced
+  * lintian fixes:
+    - add ${misc:Depends} to dependencies
+    - remove e17-data.lintian-overrides, no longer needed
+    - Add overrides about setuid root programs to e17.lintian-overrides.in
+  * As there is an arch-dependant lintian override, use an overrides.in and
+    handle that in debian/rules.
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Fri, 02 Jan 2009 18:46:31 +0100
+
+e17 (0.16.999.050-1) experimental; urgency=low
+
+  * New upstream version (Closes: #504057)
+    - Version B-D on libecore, libevas, libedje and libeet as e17 is using
+      symbols from the new versions.
+    - Build-Depend on libeet-bin, now necessary
+  * Bump Standards-Version to 3.8.0
+  * patch 01_install_internal-use_binaries_in_usr_lib_enlightenment.diff :
+    - actually introduced in the initial revision, installs some binaries which
+     are only for internal use in usr/lib/enligthenment instead of /usr/bin
+  * Bump B-D on debhelper to 6.0.7 to be sure to get dh_lintian
+  * Fix typo in README.Debian. (Closes: #495185)
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Mon, 10 Nov 2008 01:00:41 +0100
+
+e17 (0.16.999.043-1) experimental; urgency=low
+
+  [ Jan Lübbe ]
+  * New upstream release
+  * Add watch file
+
+  [ Albin Tonnerre ]
+  * Install the batget binary, as it actually exists in this version
+  * debian/control: Add Vcs-* and Homepage fields
+  * debian/rules:
+    - No longer remove the layout module, as it's not installed anymore
+    - No need for the tempget binary to be chmod 4755 - 755 is enough
+
+ -- Jan Lübbe <jluebbe@debian.org>  Sat, 07 Jun 2008 18:35:29 +0200
+
+e17 (0.16.999.042-2) experimental; urgency=low
+
+  [ Albin Tonnerre ]
+  * Install setuid binaries correctly
+
+ -- Jan Lübbe <jluebbe@debian.org>  Mon, 05 May 2008 01:01:19 +0200
+
+e17 (0.16.999.042-1) experimental; urgency=low
+
+  [ Albin Tonnerre ]
+  * Initial Release (Closes: #405860)
+  * Override linian tag possible-gpl-code-linked-with-openssl
+    - Only the Debian packaging is GPL
+
+ -- Jan Lübbe <jluebbe@debian.org>  Sun, 04 May 2008 22:55:33 +0200

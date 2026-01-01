@@ -1,0 +1,265 @@
+diff --git a/src/lib/eet_cipher.c b/src/lib/eet_cipher.c
+index 4e1433c..b5f5c00 100644
+--- a/src/lib/eet_cipher.c
++++ b/src/lib/eet_cipher.c
+@@ -505,9 +505,9 @@ eet_identity_sign(FILE    *fp,
+    gnutls_privkey_t privkey;
+ #endif
+ # else /* ifdef HAVE_GNUTLS */
+-   EVP_MD_CTX md_ctx;
+-   unsigned int sign_len = 0;
+-   int cert_len = 0;
++    EVP_MD_CTX *md_ctx = EVP_MD_CTX_new();
++    size_t sign_len = 0;
++    int cert_len = 0;
+ # endif /* ifdef HAVE_GNUTLS */
+ 
+    /* A few check and flush pending write. */
+@@ -613,13 +613,17 @@ eet_identity_sign(FILE    *fp,
+         goto on_error;
+      }
+ 
+-   /* Do the signature. */
+-   EVP_SignInit(&md_ctx, EVP_sha1());
+-   EVP_SignUpdate(&md_ctx, data, st_buf.st_size);
+-   err = EVP_SignFinal(&md_ctx,
+-                       sign,
+-                       (unsigned int *)&sign_len,
+-                       key->private_key);
++    /* Do the signature. */
++    EVP_DigestSignInit(md_ctx, NULL, EVP_sha1(), NULL, key->private_key);
++    EVP_DigestSignUpdate(md_ctx, data, st_buf.st_size);
++    EVP_DigestSignFinal(md_ctx, NULL, &sign_len);
++    sign = realloc(sign, sign_len);
++    if (!sign)
++      {
++         err = EET_ERROR_OUT_OF_MEMORY;
++         goto on_error;
++      }
++    err = EVP_DigestSignFinal(md_ctx, sign, &sign_len);
+    if (err != 1)
+      {
+         ERR_print_errors_fp(stdout);
+@@ -662,19 +666,21 @@ eet_identity_sign(FILE    *fp,
+ 
+ on_error:
+ # ifdef HAVE_GNUTLS
+-   if (cert)
+-     free(cert);
++    if (cert)
++      free(cert);
+ 
+ # else /* ifdef HAVE_GNUTLS */
+-   if (cert)
+-     OPENSSL_free(cert);
++    if (cert)
++      OPENSSL_free(cert);
++    if (md_ctx)
++      EVP_MD_CTX_free(md_ctx);
+ 
+ # endif /* ifdef HAVE_GNUTLS */
+-   if (sign)
+-     free(sign);
++    if (sign)
++      free(sign);
+ 
+-   munmap(data, st_buf.st_size);
+-   return err;
++    munmap(data, st_buf.st_size);
++    return err;
+ #else /* ifdef HAVE_SIGNATURE */
+    fp = NULL;
+    key = NULL;
+@@ -811,11 +817,11 @@ eet_identity_check(const void   *data_base,
+    gnutls_x509_crt_deinit(cert);
+ 
+ # else /* ifdef HAVE_GNUTLS */
+-   const unsigned char *tmp;
+-   EVP_PKEY *pkey;
+-   X509 *x509;
+-   EVP_MD_CTX md_ctx;
+-   int err;
++    const unsigned char *tmp;
++    EVP_PKEY *pkey;
++    X509 *x509;
++    EVP_MD_CTX *md_ctx = EVP_MD_CTX_new();
++    int err;
+ 
+    /* Strange but d2i_X509 seems to put 0 all over the place. */
+    tmp = alloca(cert_len);
+@@ -832,13 +838,14 @@ eet_identity_check(const void   *data_base,
+         return NULL;
+      }
+ 
+-   /* Verify the signature */
+-   EVP_VerifyInit(&md_ctx, EVP_sha1());
+-   EVP_VerifyUpdate(&md_ctx, data_base, data_length);
+-   err = EVP_VerifyFinal(&md_ctx, sign, sign_len, pkey);
++    /* Verify the signature */
++    EVP_DigestVerifyInit(md_ctx, NULL, EVP_sha1(), NULL, pkey);
++    EVP_DigestVerifyUpdate(md_ctx, data_base, data_length);
++    err = EVP_DigestVerifyFinal(md_ctx, sign, sign_len);
+ 
+-   X509_free(x509);
+-   EVP_PKEY_free(pkey);
++    X509_free(x509);
++    EVP_PKEY_free(pkey);
++    EVP_MD_CTX_free(md_ctx);
+ 
+    if (sha1)
+      {
+@@ -970,10 +977,11 @@ eet_cipher(const void   *data,
+    gcry_error_t err = 0;
+    gcry_cipher_hd_t cipher;
+ # else /* ifdef HAVE_GNUTLS */
+-   /* Openssl declarations*/
+-   EVP_CIPHER_CTX ctx;
+-   unsigned int *buffer = NULL;
+-   int tmp_len;
++    /* Openssl declarations*/
++    EVP_CIPHER_CTX *ctx = EVP_CIPHER_CTX_new();
++    unsigned int *buffer = NULL;
++    int tmp_len;
++    int tmp_len2;
+ # endif /* ifdef HAVE_GNUTLS */
+ 
+ # ifdef HAVE_GNUTLS
+@@ -1053,29 +1061,28 @@ eet_cipher(const void   *data,
+ 
+    memcpy(buffer + 1, data, size);
+ 
+-   /* Openssl create the corresponding cipher
+-      AES with a 256 bit key, Cipher Block Chaining mode */
+-   EVP_CIPHER_CTX_init(&ctx);
+-   if (!EVP_EncryptInit_ex(&ctx, EVP_aes_256_cbc(), NULL, ik, iv))
+-     goto on_error;
++    /* Openssl create the corresponding cipher
++       AES with a 256 bit key, Cipher Block Chaining mode */
++    if (!EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, ik, iv))
++      goto on_error;
+ 
+    opened = 1;
+ 
+    memset(iv, 0, sizeof (iv));
+    memset(ik, 0, sizeof (ik));
+ 
+-   /* Openssl encrypt */
+-   if (!EVP_EncryptUpdate(&ctx, (unsigned char *)(ret + 1), &tmp_len,
+-                          (unsigned char *)buffer,
+-                          size + sizeof(unsigned int)))
+-     goto on_error;
++    /* Openssl encrypt */
++    if (!EVP_EncryptUpdate(ctx, (unsigned char *)(ret + 1), &tmp_len,
++                           (unsigned char *)buffer,
++                           size + sizeof(unsigned int)))
++      goto on_error;
+ 
+-   /* Openssl close the cipher */
+-   if (!EVP_EncryptFinal_ex(&ctx, ((unsigned char *)(ret + 1)) + tmp_len,
+-                            &tmp_len))
+-     goto on_error;
++    /* Openssl close the cipher */
++    if (!EVP_EncryptFinal_ex(ctx, ((unsigned char *)(ret + 1)) + tmp_len,
++                             &tmp_len2))
++      goto on_error;
+ 
+-   EVP_CIPHER_CTX_cleanup(&ctx);
++    EVP_CIPHER_CTX_free(ctx);
+    free(buffer);
+ # endif /* ifdef HAVE_GNUTLS */
+ 
+@@ -1100,9 +1107,9 @@ on_error:
+      gcry_cipher_close(cipher);
+ 
+ # else /* ifdef HAVE_GNUTLS */
+-   /* Openssl error */
+-   if (opened)
+-     EVP_CIPHER_CTX_cleanup(&ctx);
++    /* Openssl error */
++    if (ctx)
++      EVP_CIPHER_CTX_free(ctx);
+ 
+    free(buffer);
+    
+@@ -1203,26 +1210,23 @@ eet_decipher(const void   *data,
+    gcry_cipher_close(cipher);
+ 
+ # else /* ifdef HAVE_GNUTLS */
+-   EVP_CIPHER_CTX ctx;
+-   int opened = 0;
++    EVP_CIPHER_CTX *ctx = EVP_CIPHER_CTX_new();
++    int opened = 0;
+ 
+-   /* Openssl create the corresponding cipher */
+-   EVP_CIPHER_CTX_init(&ctx);
+-   opened = 1;
+-
+-   if (!EVP_DecryptInit_ex(&ctx, EVP_aes_256_cbc(), NULL, ik, iv))
+-     goto on_error;
++    /* Openssl create the corresponding cipher */
++    if (!EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, ik, iv))
++      goto on_error;
+ 
+    memset(iv, 0, sizeof (iv));
+    memset(ik, 0, sizeof (ik));
+ 
+-   /* Openssl decrypt */
+-   if (!EVP_DecryptUpdate(&ctx, (unsigned char *)ret, &tmp,
+-                          (unsigned char *)(over + 1), tmp_len))
+-     goto on_error;
++    /* Openssl decrypt */
++    if (!EVP_DecryptUpdate(ctx, (unsigned char *)ret, &tmp,
++                           (unsigned char *)(over + 1), tmp_len))
++      goto on_error;
+ 
+-   /* Openssl close the cipher*/
+-   EVP_CIPHER_CTX_cleanup(&ctx);
++    /* Openssl close the cipher*/
++    EVP_CIPHER_CTX_free(ctx);
+ # endif /* ifdef HAVE_GNUTLS */
+    /* Get the decrypted data size */
+    tmp = *ret;
+@@ -1254,8 +1258,8 @@ on_error:
+ 
+ # ifdef HAVE_GNUTLS
+ # else
+-   if (opened)
+-     EVP_CIPHER_CTX_cleanup(&ctx);
++    if (ctx)
++      EVP_CIPHER_CTX_free(ctx);
+ 
+ # endif /* ifdef HAVE_GNUTLS */
+    if (result)
+@@ -1342,7 +1346,7 @@ eet_pbkdf2_sha1(const char          *key,
+    int j, k;
+ # ifdef HAVE_GNUTLS
+ # else
+-   HMAC_CTX hctx;
++    HMAC_CTX *hctx = HMAC_CTX_new();
+ # endif /* ifdef HAVE_GNUTLS */
+ 
+    buf = alloca(salt_len + 4);
+@@ -1366,10 +1370,10 @@ eet_pbkdf2_sha1(const char          *key,
+         memcpy(buf + salt_len, tab, 4);
+         eet_hmac_sha1(key, key_len, buf, salt_len + 4, digest);
+ # else /* ifdef HAVE_GNUTLS */
+-        HMAC_Init(&hctx, key, key_len, EVP_sha1());
+-        HMAC_Update(&hctx, salt, salt_len);
+-        HMAC_Update(&hctx, tab, 4);
+-        HMAC_Final(&hctx, digest, NULL);
++         HMAC_Init_ex(hctx, key, key_len, EVP_sha1(), NULL);
++         HMAC_Update(hctx, salt, salt_len);
++         HMAC_Update(hctx, tab, 4);
++         HMAC_Final(hctx, digest, NULL);
+ # endif /* ifdef HAVE_GNUTLS */
+         memcpy(p, digest, tmp_len);
+ 
+@@ -1386,7 +1390,7 @@ eet_pbkdf2_sha1(const char          *key,
+ 
+ # ifdef HAVE_GNUTLS
+ # else
+-	HMAC_cleanup(&hctx);
++ 	HMAC_CTX_free(hctx);
+ # endif /* ifdef HAVE_GNUTLS */
+      }
+ 

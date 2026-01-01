@@ -1,0 +1,4 @@
+./debian/tmp/usr/lib/libemotion.so.1
+./debian/tmp/usr/lib/libemotion.so.1.7.9
+./debian/tmp/usr/lib/emotion/em_generic.so
+./debian/tmp/usr/lib/emotion/xine.so

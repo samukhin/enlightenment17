@@ -1,0 +1,21 @@
+Package: libefreet-dev
+Source: efreet
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 397
+Depends: libefreet1 (= 1.7.9-1ppa1~saucy), libeina-dev (>= 1.7.6), libecore-dev (>= 1.7.6)
+Section: libdevel
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: Development files for libefreet and libefreet-mime
+ An implementation of several specifications from freedesktop.org intended for
+ use in Enlightenment DR17 (e17) and other applications using the Enlightenment
+ Foundation Libraries (EFL). Currently, the following specifications are
+ included:
+  - Base Directory
+  - Desktop Entry
+  - Icon Theme
+  - Menu
+ .
+ This package contains headers and static libraries for Efreet.

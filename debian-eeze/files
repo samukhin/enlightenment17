@@ -1,0 +1,4 @@
+eeze_1.7.9-1ppa1~saucy_amd64.buildinfo libs extra
+libeeze-dev_1.7.9-1ppa1~saucy_amd64.deb libdevel extra
+libeeze1-dbgsym_1.7.9-1ppa1~saucy_amd64.ddeb debug optional automatic=yes
+libeeze1_1.7.9-1ppa1~saucy_amd64.deb libs extra

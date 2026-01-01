@@ -1,0 +1,44 @@
+Source: efreet
+Section: libs
+Priority: optional
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Uploaders: Hannes Janetzek <hannes.janetzek@gmail.com>
+Build-Depends: cdbs, debhelper (>= 7), libtool, automake, autopoint, subversion,
+ libeina-dev (>= 1.7.6), 
+ libecore-dev (>= 1.7.6)
+Standards-Version: 3.9.1
+Homepage: http://www.enlightenment.org
+
+Package: libefreet1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Library that implements freedesktop.org specs for use with E17/EFL
+ An implementation of several specifications from freedesktop.org intended for
+ use in Enlightenment DR17 (e17) and other applications using the Enlightenment
+ Foundation Libraries (EFL). Currently, the following specifications are
+ included:
+  - Base Directory
+  - Desktop Entry
+  - Icon Theme
+  - Menu
+ .
+ This package provides the libefreet0 and libefreet0-mime libraries, which
+ contains efreet-based functions for dealing with mime.
+
+Package: libefreet-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libefreet1 (= ${binary:Version}),
+ libeina-dev (>= 1.7.6), 
+ libecore-dev (>= 1.7.6)
+Description: Development files for libefreet and libefreet-mime
+ An implementation of several specifications from freedesktop.org intended for
+ use in Enlightenment DR17 (e17) and other applications using the Enlightenment
+ Foundation Libraries (EFL). Currently, the following specifications are
+ included:
+  - Base Directory
+  - Desktop Entry
+  - Icon Theme
+  - Menu
+ .
+ This package contains headers and static libraries for Efreet.

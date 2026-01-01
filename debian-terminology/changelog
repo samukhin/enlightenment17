@@ -1,0 +1,23 @@
+terminology (0.3.0-1ppa2~saucy) saucy; urgency=low
+
+  * Adding libexif dependency.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Tue, 23 Apr 2013 13:32:59 -0800
+
+terminology (0.3.0-1ppa1~saucy) saucy; urgency=low
+
+  * Updating to upstream version 0.3.0.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Tue, 23 Apr 2013 11:32:59 -0800
+
+terminology (0.2.0-1ppa1~saucy) saucy; urgency=low
+
+  * Updating to upstream version 0.2.0.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Tue, 18 Dec 2012 17:28:59 -0800
+
+terminology (0.1.0-79714ppa1~$UBUNTU_RELEASE$) $UBUNTU_RELEASE$; urgency=low
+
+  * Initial version of terminology.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Mon, 26 Nov 2012 10:28:59 -0800

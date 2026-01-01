@@ -1,0 +1,5 @@
+e17-data_0.17.5-1ppa1~saucy_amd64.deb x11 optional
+e17-dbgsym_0.17.5-1ppa1~saucy_amd64.ddeb debug optional automatic=yes
+e17-dev_0.17.5-1ppa1~saucy_amd64.deb devel optional
+e17_0.17.5-1ppa1~saucy_amd64.buildinfo x11 optional
+e17_0.17.5-1ppa1~saucy_amd64.deb x11 optional

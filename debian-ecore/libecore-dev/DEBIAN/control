@@ -1,0 +1,20 @@
+Package: libecore-dev
+Source: ecore
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 2452
+Depends: libecore1 (= 1.7.9-1ppa1~saucy), libeet-dev (>= 1.7.6), libevas-dev (>= 1.7.6), libeina-dev (>= 1.7.6), pkg-config, libssl-dev, libcurl4-gnutls-dev, libxcursor-dev, libxss-dev, libxrender-dev, libxinerama-dev, libxrandr-dev, libxext-dev, libxcomposite-dev, libxdamage-dev, x11proto-xext-dev, libxtst-dev, libglib2.0-dev
+Recommends: libxp-dev
+Suggests: libecore-doc
+Section: libdevel
+Priority: optional
+Homepage: http://enlightenment.org
+Description: Ecore headers and static libraries
+ This is the core event abstraction layer and X abstraction layer that makes
+ doing selections, Xdnd, general X stuff, and event loops, timeouts and idle
+ handlers fast, optimized, and convenient. It's a separate library so anyone
+ can make use of the work put into Ecore to make this job easy for
+ applications.
+ .
+ This package contains headers and static libraries for the Ecore library.

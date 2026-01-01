@@ -1,0 +1,13 @@
+44380971a63fe34b417f2ee880766215  usr/lib/debug/usr/lib/libecore.so.1.7.9
+37bcce9772ae857dc548151507cb62d8  usr/lib/debug/usr/lib/libecore_con.so.1.7.9
+ed72a23d1de93d352d3e1c2509fee0b7  usr/lib/debug/usr/lib/libecore_evas.so.1.7.9
+0d76bac40c3fc3036193c2528afb1dd1  usr/lib/debug/usr/lib/libecore_fb.so.1.7.9
+aed863a21a91b5c7f63ed4d6d48b79cf  usr/lib/debug/usr/lib/libecore_file.so.1.7.9
+823bc3f4a963b776caafe651074aff10  usr/lib/debug/usr/lib/libecore_imf.so.1.7.9
+d12b990509f21c3bbb57710f431a901e  usr/lib/debug/usr/lib/libecore_imf_evas.so.1.7.9
+ee1bf5773541a8bd474844150e246c9a  usr/lib/debug/usr/lib/libecore_input.so.1.7.9
+22a06724831ebe4fdce1d766fb9c56d0  usr/lib/debug/usr/lib/libecore_input_evas.so.1.7.9
+3bdd8a81bd13b7c13440c038e41430c0  usr/lib/debug/usr/lib/libecore_ipc.so.1.7.9
+6e07bee5eb822248662b8749b2f50abc  usr/lib/debug/usr/lib/libecore_x.so.1.7.9
+c5cee65d29c3ef0448e93cf69563f089  usr/share/doc/libecore-dbg/changelog.Debian.gz
+24381b270233d79ddac5677ed0bb21ce  usr/share/doc/libecore-dbg/copyright

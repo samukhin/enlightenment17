@@ -1,0 +1,57 @@
+diff --git a/src/lib/ecore_con/dns.h b/src/lib/ecore_con/dns.h
+index 3504dd2..17582bf 100644
+--- a/src/lib/ecore_con/dns.h
++++ b/src/lib/ecore_con/dns.h
+@@ -482,7 +482,7 @@ size_t dns_rr_print(void *, size_t, struct dns_rr *, struct dns_packet *, int *)
+ 
+ 
+ #define dns_rr_i_new(P, ...) \
+-	dns_rr_i_init(&dns_quietinit((struct dns_rr_i){ 0, __VA_ARGS__ }), (P))
++	({ struct dns_rr_i _tmp = dns_quietinit((struct dns_rr_i){ 0, __VA_ARGS__ }); dns_rr_i_init(&_tmp, (P)); })
+ 
+ struct dns_rr_i {
+ 	enum dns_section section;
+diff --git a/src/lib/ecore_con/ecore_con_dns.c b/src/lib/ecore_con/ecore_con_dns.c
+index 6bade04..58a9f48 100644
+--- a/src/lib/ecore_con/ecore_con_dns.c
++++ b/src/lib/ecore_con/ecore_con_dns.c
+@@ -308,7 +308,7 @@ ecore_con_info_get(Ecore_Con_Server *svr,
+    if (hints)
+      memcpy(&dns->hints, hints, sizeof(struct addrinfo));
+ 
+-   if (!(dns->resolv = dns_res_open(resconf, hosts, dns_hints_mortal(dns_hints_local(resconf, &error)), NULL, dns_opts(), &error)))
++    if (!(dns->resolv = dns_res_open(resconf, hosts, dns_hints_mortal(dns_hints_local(resconf, &error)), NULL, NULL, &error)))
+      {
+         ERR("res_open: %s", dns_strerror(error));
+         goto reserr;
+diff --git a/src/lib/ecore_con/ecore_con_ssl.c b/src/lib/ecore_con/ecore_con_ssl.c
+index ff35486..447741b 100644
+--- a/src/lib/ecore_con/ecore_con_ssl.c
++++ b/src/lib/ecore_con/ecore_con_ssl.c
+@@ -1560,18 +1560,18 @@ _ecore_con_ssl_server_prepare_openssl(Ecore_Con_Server *svr,
+      {
+       case ECORE_CON_USE_SSL3:
+       case ECORE_CON_USE_SSL3 | ECORE_CON_LOAD_CERT:
+-        if (!svr->created)
+-          SSL_ERROR_CHECK_GOTO_ERROR(!(svr->ssl_ctx = SSL_CTX_new(SSLv3_client_method())));
+-        else
+-          SSL_ERROR_CHECK_GOTO_ERROR(!(svr->ssl_ctx = SSL_CTX_new(SSLv3_server_method())));
++         if (!svr->created)
++           SSL_ERROR_CHECK_GOTO_ERROR(!(svr->ssl_ctx = SSL_CTX_new(TLS_client_method())));
++         else
++           SSL_ERROR_CHECK_GOTO_ERROR(!(svr->ssl_ctx = SSL_CTX_new(TLS_server_method())));
+         break;
+ 
+       case ECORE_CON_USE_TLS:
+       case ECORE_CON_USE_TLS | ECORE_CON_LOAD_CERT:
+-        if (!svr->created)
+-          SSL_ERROR_CHECK_GOTO_ERROR(!(svr->ssl_ctx = SSL_CTX_new(TLSv1_client_method())));
+-        else
+-          SSL_ERROR_CHECK_GOTO_ERROR(!(svr->ssl_ctx = SSL_CTX_new(TLSv1_server_method())));
++         if (!svr->created)
++           SSL_ERROR_CHECK_GOTO_ERROR(!(svr->ssl_ctx = SSL_CTX_new(TLS_client_method())));
++         else
++           SSL_ERROR_CHECK_GOTO_ERROR(!(svr->ssl_ctx = SSL_CTX_new(TLS_server_method())));
+         break;
+ 
+       case ECORE_CON_USE_MIXED:

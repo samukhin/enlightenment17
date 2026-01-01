@@ -1,0 +1,14 @@
+PACKAGE_TARNAME=eio
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: eio
+Description: Enlightenned Asynchronous Input Output library
+Requires.private:  eet >= 1.7.9 eina >= 1.7.9 ecore >= 1.7.9
+Version: 1.7.9
+Libs: -L${libdir} -leio
+Libs.private: -lm
+Cflags: -I${includedir}/eio-1

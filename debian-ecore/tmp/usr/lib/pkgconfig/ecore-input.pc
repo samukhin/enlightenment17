@@ -1,0 +1,13 @@
+PACKAGE_TARNAME=ecore
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: ecore-input
+Description: E core library, Input module
+Requires.private: ecore >= 1.7.9 eina >= 1.7.9 
+Version: 1.7.9
+Libs: -L${libdir} -lecore_input
+Cflags: -I${includedir}/ecore-1

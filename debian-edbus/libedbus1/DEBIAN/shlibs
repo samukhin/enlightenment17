@@ -1,0 +1,7 @@
+libebluez 1 libedbus1 (>= 1.7.9)
+libeconnman0_7x 1 libedbus1 (>= 1.7.9)
+libedbus 1 libedbus1 (>= 1.7.9)
+libehal 1 libedbus1 (>= 1.7.9)
+libenotify 1 libedbus1 (>= 1.7.9)
+libeofono 1 libedbus1 (>= 1.7.9)
+libeukit 1 libedbus1 (>= 1.7.9)

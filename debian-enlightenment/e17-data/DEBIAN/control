@@ -1,0 +1,18 @@
+Package: e17-data
+Source: e17
+Version: 1:0.17.5-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 28132
+Enhances: e17
+Section: x11
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: Enlightenment Window Manager Run Time Data Files
+ Enlightenment is an advanced window manager for X11. Unique
+ features include: a fully animated background, nice drop shadows
+ around windows, backed by an extremely clean and optimized
+ foundation of APIs.
+ .
+ These are the architecture independent runtime support files for the
+ Enlightenment DR17 Window Manager.

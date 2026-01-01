@@ -1,0 +1,17 @@
+a48602d517f29dff9d1bed4cca209ea6  usr/bin/edje_cc
+54d2228c963c3c4054dcea63482ba2a7  usr/bin/edje_decc
+097f56a247eea741e61b8f9ccc61e468  usr/bin/edje_external_inspector
+6dc1b70a3156a79a587f831d9a4ced27  usr/bin/edje_inspector
+02cfd1d09a804ee6078bdf697d41b2a5  usr/bin/edje_player
+496c41dc113dda69d2af96c244765a52  usr/bin/edje_recc
+1430b1dea998d919846b9f74455f88a6  usr/lib/edje/utils/epp
+4a3f88fdc5ecc89d9cdbcac189d08153  usr/share/doc/libedje-bin/AUTHORS
+52e6effe5a090d79e362a1a4e68a709d  usr/share/doc/libedje-bin/NEWS.gz
+ba859a2be6d626c2bf781a6558bf2d6e  usr/share/doc/libedje-bin/README
+4a56f7bc1b646fd59709bc17ef80daa5  usr/share/doc/libedje-bin/changelog.Debian.gz
+46ae0293ba238d9200c6a7b67ec0563f  usr/share/doc/libedje-bin/changelog.gz
+04d0a50643b7df39b27bd7c972839094  usr/share/doc/libedje-bin/copyright
+0ba373995fa600937837ddde9c9219b4  usr/share/edje/include/edje.inc
+d383a82b697fd007a6158c3ac961a68c  usr/share/man/man1/edje_cc.1.gz
+783290dbf70998d534cde8b7aaaaa45e  usr/share/man/man1/edje_decc.1.gz
+28dd572314f37e3957e9755056354dfd  usr/share/man/man1/edje_recc.1.gz

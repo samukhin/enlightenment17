@@ -1,0 +1,13 @@
+e0976c758ffd879a513f9a6aca1488bc  usr/lib/debug/usr/bin/edje_cc
+875d39f13542dc5630dbf2470ae74c6d  usr/lib/debug/usr/bin/edje_decc
+9a11dd3bc0fbf4a6e73f7c56002a4808  usr/lib/debug/usr/bin/edje_external_inspector
+e81e81c5c7d3ff8c0792f87c3c28e524  usr/lib/debug/usr/bin/edje_inspector
+f052a4d3186347240246a5fc92647a76  usr/lib/debug/usr/bin/edje_player
+bcd57d76b84a447679731f8517130182  usr/lib/debug/usr/lib/edje/utils/epp
+7fa23c4820bb48dc776db58c198cfce3  usr/lib/debug/usr/lib/libedje.so.1.7.9
+4a3f88fdc5ecc89d9cdbcac189d08153  usr/share/doc/libedje-dbg/AUTHORS
+52e6effe5a090d79e362a1a4e68a709d  usr/share/doc/libedje-dbg/NEWS.gz
+ba859a2be6d626c2bf781a6558bf2d6e  usr/share/doc/libedje-dbg/README
+4a56f7bc1b646fd59709bc17ef80daa5  usr/share/doc/libedje-dbg/changelog.Debian.gz
+46ae0293ba238d9200c6a7b67ec0563f  usr/share/doc/libedje-dbg/changelog.gz
+04d0a50643b7df39b27bd7c972839094  usr/share/doc/libedje-dbg/copyright

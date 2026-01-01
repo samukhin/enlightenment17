@@ -1,0 +1,14 @@
+Package: libethumb-plugins
+Source: ethumb
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 49
+Depends: libc6 (>= 2.4), libecore1 (>= 1.7.9), libedje1, libeet1 (>= 1.0.0), libeina1 (>= 1.0.0~beta), libemotion0 (>= 1.7.9), libethumb, libevas1
+Section: x11
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: Enlightenment thumbnailing library
+ Thumbnailing library.
+ .
+ This package contains plugins.

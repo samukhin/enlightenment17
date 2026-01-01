@@ -1,0 +1,3 @@
+debian/tmp/usr/lib/lib*.so.*
+debian/tmp/usr/bin/embryo_cc
+debian/tmp/usr/share/embryo/include/*.inc

@@ -1,0 +1,15 @@
+Package: libedbus-dev
+Source: edbus
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 753
+Depends: libedbus1 (= 1.7.9-1ppa1~saucy), libdbus-1-dev, libeina-dev (>= 1.7.6), libevas-dev (>= 1.7.6), libecore-dev (>= 1.7.6)
+Section: libdevel
+Priority: optional
+Homepage: http://enlightenment.org
+Description: D-Bus and HAL wrapper libraries for use with the EFL - Development files
+ Wrappers around D-Bus to ease integrating D-Bus with EFL based applications.
+ .
+ This package contains headers and static libraries for libedbus, libehal and
+ libenotify

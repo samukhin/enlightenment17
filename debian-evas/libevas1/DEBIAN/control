@@ -1,0 +1,21 @@
+Package: libevas1
+Source: evas
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 1767
+Depends: libc6 (>= 2.34), libeet1 (>= 1.1.0), libeina1 (>= 1.7.9-1ppa1~saucy), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.2.1), libfribidi0 (>= 0.19.2), libgif7 (>= 5.1), libgl1, libjpeg8 (>= 8c), libpng16-16 (>= 1.6.2-1), libtiff5 (>= 4.0.3), libx11-6, libxext6, libxrender1
+Conflicts: libevas-0.9.9.050a-engines, libevas-0.9.9.050a-engines-extras, libevas-svn-05, libevas-svn-05-engine-fb, libevas-svn-05-engines-core, libevas-svn-05-engines-x, libevas0
+Replaces: libevas-engines, libevas-engines-extras, libevas-svn-05, libevas-svn-05-engine-fb, libevas-svn-05-engines-core, libevas-svn-05-engines-x, libevas0
+Section: libs
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: Enlightenment DR17 advanced canvas library
+ Evas is an advanced canvas library, providing six engines for rendering: X11,
+ OpenGL (hardware accelerated), DirectFB, the framebuffer, Microsoft Windows
+ and Qtopia.
+ .
+ Due to its simple API, evas can be developed with rapidly, and cleanly.
+ .
+ This package contains the core library and a set of image loaders and/or savers
+ for various formats: eet, gif, jpeg, png, svg, tiff and xpm

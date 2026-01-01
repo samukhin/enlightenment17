@@ -1,0 +1,105 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/class/autotools.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+
+unexport LANG
+
+CFLAGS += -fvisibility=hidden -O2
+LDFLAGS += -fvisibility=hidden
+
+common-post-build-arch:: check-stamp
+
+check-stamp: build-arch
+	$(MAKE) check
+	touch $@
+
+# install/libeina-doc::
+# 	$(MAKE) doc
+
+DEB_CONFIGURE_SCRIPT := ./autogen.sh
+DEB_CONFIGURE_EXTRA_FLAGS := --disable-rpath
+
+#binary: binary-indep binary-arch
+#binary-indep: build-doc-stamp
+
+# build-doc-stamp: build
+# 	$(MAKE) doc
+# 	touch $@
+
+# %:
+# 	dh $@
+
+# override_dh_auto_configure:
+# 	touch README
+# 	aclocal -I m4
+# 	autoheader
+# 	autoconf
+# 	libtoolize --copy --automake
+# 	automake --add-missing --copy --gnu
+# 	dh_auto_configure  -- \
+# 	--disable-rpath \
+# 	--enable-strict
+
+#	--enable-doc \
+# 	--enable-fb \
+# 	--enable-pthreads \
+# 	--enable-fontconfig \
+# 	--enable-software-xlib \
+# 	--enable-static-software-generic \
+# 	--enable-buffer \
+# 	--enable-gl-x11 \
+# 	--enable-xrender-x11 \
+# 	--disable-directfb \
+# 	--enable-image-loader-gif \
+# 	--enable-image-loader-png \
+# 	--enable-image-loader-jpeg \
+# 	--enable-image-loader-eet \
+# 	--enable-font-loader-eet \
+# 	--enable-image-loader-tiff \
+# 	--enable-image-loader-xpm \
+# 	--enable-image-loader-svg \
+# 	--enable-scale-sample \
+# 	--enable-scale-smooth \
+# 	--enable-convert-yuv \
+# 	--enable-small-dither-mask \
+# 	--disable-no-dither-mask \
+# 	--enable-convert-8-rgb-332 \
+# 	--enable-convert-8-rgb-666 \
+# 	--enable-convert-8-rgb-232 \
+# 	--enable-convert-8-rgb-222 \
+# 	--enable-convert-8-rgb-221 \
+# 	--enable-convert-8-rgb-121 \
+# 	--enable-convert-8-rgb-111 \
+# 	--enable-convert-16-rgb-565 \
+# 	--enable-convert-16-bgr-565 \
+# 	--enable-convert-16-rgb-555 \
+# 	--enable-convert-16-rgb-444 \
+# 	--enable-convert-16-rgb-ipq \
+# 	--enable-convert-16-rgb-rot-0 \
+# 	--enable-convert-16-rgb-rot-180 \
+# 	--enable-convert-16-rgb-rot-270 \
+# 	--enable-convert-16-rgb-rot-90 \
+# 	--enable-convert-24-rgb-888 \
+# 	--enable-convert-24-bgr-888 \
+# 	--enable-convert-32-rgb-8888 \
+# 	--enable-convert-32-rgbx-8888 \
+# 	--enable-convert-32-bgr-8888 \
+# 	--enable-convert-32-bgrx-8888 \
+# 	--enable-convert-32-rgb-rot-0 \
+# 	--enable-convert-32-rgb-rot-180 \
+# 	--enable-convert-32-rgb-rot-270 \
+# 	--enable-convert-32-rgb-rot-90 \
+# 	--disable-image-loader-edb \
+# 	--disable-software-16-x11 \
+# 	--disable-fribidi
+
+# override_dh_makeshlibs:
+# 	dh_makeshlibs -V
+
+# override_dh_auto_clean:
+# 	-$(MAKE) maintainer-clean
+# 	rm -f README
+
+# override_dh_strip:
+#	dh_strip --dbg-package=libevas-dbg

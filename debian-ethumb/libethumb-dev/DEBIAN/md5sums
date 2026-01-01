@@ -1,0 +1,14 @@
+c9d7954c403d20dafbbeb53caf38ddfb  usr/include/ethumb-1/Ethumb.h
+8e55bf79ab5ae6927609091ddc886085  usr/include/ethumb-1/Ethumb_Client.h
+a2f01365e5d6ab2957ddf063652102eb  usr/include/ethumb-1/Ethumb_Plugin.h
+1d19c6742352af315dd4069348a7b012  usr/lib/libethumb.a
+09964a70a44ad0de98e184fd68fef810  usr/lib/libethumb_client.a
+3e013deedd433ec5810eb9116dbdc969  usr/lib/pkgconfig/ethumb.pc
+828788ea8f911127534d90cb4e273224  usr/lib/pkgconfig/ethumb_client.pc
+9930535041c5e4eb386bb6ef8ba4a1bd  usr/share/doc/libethumb-dev/AUTHORS
+994c23d7398398c1d5678d59a7a90932  usr/share/doc/libethumb-dev/NEWS.gz
+3d94ae5e1a617aa1d86d6db87ca1e252  usr/share/doc/libethumb-dev/README
+4297ab6f0edb1e7254ebda79934bdd35  usr/share/doc/libethumb-dev/TODO
+0ce9167cf5c5bacfcf31a96e2b701798  usr/share/doc/libethumb-dev/changelog.Debian.gz
+cdce4ff594ef8f4f61e5f0ec2c12a2fa  usr/share/doc/libethumb-dev/changelog.gz
+5c0eea93cd2eb2ea949f9eb3ea5075a1  usr/share/doc/libethumb-dev/copyright

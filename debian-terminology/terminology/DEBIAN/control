@@ -1,0 +1,10 @@
+Package: terminology
+Version: 0.3.0-1ppa2~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 3122
+Depends: libc6 (>= 2.34), libecore1 (>= 1.7.9), libedje1, libeet1 (>= 1.2.3), libefreet1 (>= 1.7.9), libeina1 (>= 1.0.0-1-svn60184), libelementary, libemotion0 (>= 1.7.9), libethumb, libevas1
+Section: x11
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: Terminal using EFL

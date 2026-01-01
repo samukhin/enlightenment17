@@ -1,0 +1,19 @@
+Package: libedje-dbg
+Source: edje
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 2796
+Depends: libedje1 (= 1.7.9-1ppa1~saucy)
+Section: debug
+Priority: extra
+Homepage: http://enlightenment.org
+Description: Debugging symbols for libedje
+ Edje is a graphical layout and animation library for animated resizable,
+ compressed and scalable themes. It is the theming engine behind
+ Enlightenment DR 0.17.
+ .
+ This package contains unstripped shared libraries. It is provided primarily
+ to provide a backtrace with names in a debugger, this makes it somewhat
+ easier to interpret core dumps. The libraries are installed in
+ /usr/lib/debug and are automatically used by gdb.

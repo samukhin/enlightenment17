@@ -1,0 +1,14 @@
+PACKAGE_TARNAME=ecore
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: ecore
+Description: Ecore event abstraction library
+Requires.private: glib-2.0 eina >= 1.7.9 
+Version: 1.7.9
+Libs: -L${libdir} -lecore -leina -lpthread 
+Libs.private: -lm
+Cflags: -I${includedir}/ecore-1

@@ -1,0 +1,16 @@
+Package: libedje-doc
+Source: edje
+Version: 1.7.9-1ppa1~saucy
+Architecture: all
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 11790
+Enhances: libedje-dev
+Section: doc
+Priority: optional
+Homepage: http://enlightenment.org
+Description: libedje0 development documentation
+ Edje is a graphical layout and animation library for animated resizable,
+ compressed and scalable themes. It is the theming engine behind
+ Enlightenment DR 0.17.
+ .
+ This package provides development documentation for Edje.

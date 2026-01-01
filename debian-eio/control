@@ -1,0 +1,26 @@
+Source: eio
+Section: libs
+Priority: optional
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Uploaders: Cédric Schieli <cschieli@gmail.com>
+Build-Depends: debhelper (>= 7), libeina-dev (>= 1.7.6),
+ libecore-dev (>= 1.7.6), automake, libtool
+Standards-Version: 3.8.3
+Homepage: http://enlightenment.org
+Vcs-Bzr: https://code.launchpad.net/~cschieli/freebox-eio/daily-packaging
+
+Package: libeio0
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Enlightenment Input Output Library
+ Enlightenment Input Output Library.
+
+Package: libeio-dev
+Architecture: any
+Section: libdevel
+Depends: ${misc:Depends}, libeio0 (= ${binary:Version}),
+         libecore-dev (>= 1.7.6), libeina-dev (>= 1.7.6), pkg-config
+Description: Eio headers and static libraries
+ Enlightenment Input Output Library.
+ .
+ This package contains headers and static libraries for the Eio library.

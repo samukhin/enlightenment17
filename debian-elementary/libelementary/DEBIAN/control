@@ -1,0 +1,14 @@
+Package: libelementary
+Source: elementary
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 1763
+Depends: libc6 (>= 2.34), libecore1 (>= 1.7.9), libedbus1 (>= 1.7.9), libedje1, libeet1 (>= 1.2.3), libefreet1 (>= 1.7.9), libeina1 (>= 1.7.9-1ppa1~saucy), libeio0 (>= 1.7.9), libemotion0 (>= 1.7.9), libethumb, libevas1, libelementary-data (= 1.7.9-1ppa1~saucy)
+Section: libs
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: The Elementary widget set library
+ Elementary is a widget set based on the Enlightenment Foundation Libraries,
+ primarily aimed at creating graphical user interfaces for mobile and embedded
+ devices.

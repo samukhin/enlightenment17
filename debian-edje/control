@@ -1,0 +1,83 @@
+Source: edje
+Section: libs
+Priority: optional
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Uploaders: Albin Tonnerre <lutin@debian.org>,
+ Jan Lübbe <jluebbe@debian.org>
+Build-Depends: debhelper (>= 6), cdbs, pkg-config, check, automake1.11, 
+ subversion, libtool, libeet-dev (>= 1.7.6), libeio-dev (>= 1.7.6),
+ libevas-dev (>= 1.7.6), libecore-dev (>= 1.7.6), 
+ libembryo-dev (>= 1.7.6), libeina-dev (>= 1.7.6),
+ liblua5.1-0-dev, libfribidi-dev
+Build-Depends-Indep: doxygen
+Standards-Version: 3.9.1
+Vcs-Git: git://git.debian.org/pkg-e/libs/edje.git
+Vcs-Browser: http://git.debian.org/?p=pkg-e/libs/edje.git
+Homepage: http://enlightenment.org
+
+Package: libedje-bin
+Architecture: any
+Section: devel
+Depends: ${misc:Depends}, ${shlibs:Depends}
+#, libevas1-engine-buffer
+#libembryo-bin (>= 1.7.6), 
+Description: Various binaries for use with libedje
+ Edje is a graphical layout and animation library for animated resizable,
+ compressed and scalable themes. It is the theming engine behind
+ Enlightenment DR 0.17.
+ .
+ This package contains the following binaries:
+  - edje_cc: Compiles EDC files.
+  - edje_decc: Used to decompile compiled edje files.
+  - edje_recc: A convenience script to recompile EDC files.
+
+Package: libedje1
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, libfribidi0
+Suggests: libedje-bin (= ${binary:Version})
+Replaces: libedje0
+Description: Graphical layout and animation library
+ Edje is a graphical layout and animation library for animated resizable,
+ compressed and scalable themes. It is the theming engine behind
+ Enlightenment DR 0.17.
+
+Package: libedje-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Enhances: libedje-dev
+Description: libedje0 development documentation
+ Edje is a graphical layout and animation library for animated resizable,
+ compressed and scalable themes. It is the theming engine behind
+ Enlightenment DR 0.17.
+ .
+ This package provides development documentation for Edje.
+
+Package: libedje-dev
+Architecture: any
+Section: libdevel
+Depends: ${misc:Depends}, libedje1 (= ${binary:Version}), libedje-bin,
+ libeet-dev (>= 1.7.6), libembryo-dev (>= 1.7.6), libevas-dev (>= 1.7.6),
+ libecore-dev (>= 1.7.6), libeina-dev (>= 1.7.6), liblua5.1-0-dev, libeio-dev (>= 1.7.6),
+ pkg-config, libfribidi-dev
+Description: libedje headers and static libraries
+ Edje is a graphical layout and animation library for animated resizable,
+ compressed and scalable themes. It is the theming engine behind
+ Enlightenment DR 0.17.
+ .
+ This package provides headers and static libraries for Edje.
+
+Package: libedje-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: ${misc:Depends}, libedje1 (= ${binary:Version})
+Description: Debugging symbols for libedje
+ Edje is a graphical layout and animation library for animated resizable,
+ compressed and scalable themes. It is the theming engine behind
+ Enlightenment DR 0.17.
+ .
+ This package contains unstripped shared libraries. It is provided primarily
+ to provide a backtrace with names in a debugger, this makes it somewhat
+ easier to interpret core dumps. The libraries are installed in
+ /usr/lib/debug and are automatically used by gdb.

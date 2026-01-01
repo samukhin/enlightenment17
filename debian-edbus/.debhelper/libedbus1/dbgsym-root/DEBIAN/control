@@ -1,0 +1,13 @@
+Package: libedbus1-dbgsym
+Package-Type: ddeb
+Source: edbus
+Version: 1.7.9-1ppa1~saucy
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 376
+Depends: libedbus1 (= 1.7.9-1ppa1~saucy)
+Section: debug
+Priority: optional
+Description: debug symbols for libedbus1
+Build-Ids: 02b5a5989a802f23222c4ee21fafe9410f55addc 2493f7cd7b7079db346ce5ca958873fa1358402c 41ea1f1f27a776a0529664e8943efdd77d236345 4fc7ca1e1461767a427dc46341aaa566d6ab1bd2 77d47fec554b1ea54252fd886a8c97d2cd66b361 83e54c136bf0e336298a2814a65b96ab8b6281de 9e28a2ada69cf878d7caecac070e1d2705eebe08

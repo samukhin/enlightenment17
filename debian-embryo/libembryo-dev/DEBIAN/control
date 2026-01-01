@@ -1,0 +1,18 @@
+Package: libembryo-dev
+Source: embryo
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 119
+Depends: libembryo0 (= 1.7.9-1ppa1~saucy), pkg-config
+Section: libdevel
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: Development files for libembryo0
+ Embryo is primarily a shared library that gives you an API to load
+ and control interpreted programs compiled into an abstract machine
+ bytecode that it understands.  This abstract (or virtual) machine is
+ similar to a real machine with a CPU, but it is emulated in
+ software.
+ .
+ This package contains headers and static libraries for Embryo.

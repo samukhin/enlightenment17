@@ -1,0 +1,16 @@
+Package: libelementary-data
+Source: elementary
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 5394
+Section: libs
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: runtime data-files for libelementary
+ Elementary is a widget set based on the Enlightenment Foundation Libraries,
+ primarily aimed at creating graphical user interfaces for mobile and embedded
+ devices.
+ .
+ This package contains graphics and styles needed by applications using
+ elementary.

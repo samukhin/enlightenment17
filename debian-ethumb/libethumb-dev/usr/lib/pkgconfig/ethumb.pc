@@ -1,0 +1,13 @@
+PACKAGE_TARNAME=ethumb
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: ethumb
+Description: Thumbnail Generator Library
+Requires:   eina >= 1.7.9 evas >= 1.7.9 ecore >= 1.7.9 ecore-evas >= 1.7.9 ecore-file >= 1.7.9 edje >= 1.7.9 emotion libexif
+Version: 1.7.9
+Libs: -L${libdir} -lethumb
+Cflags: -I${includedir}/ethumb-1

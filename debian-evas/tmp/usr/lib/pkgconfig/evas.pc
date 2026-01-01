@@ -1,0 +1,14 @@
+PACKAGE_TARNAME=evas
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: evas
+Description: Evas canvas display library
+Requires.private: eet >= 1.6.0 fribidi fontconfig freetype2 eina >= 1.7.9 
+Version: 1.7.9
+Libs: -L${libdir} -levas -leina -lpthread  
+Libs.private:  -pthread 
+Cflags: -I${includedir}/evas-1

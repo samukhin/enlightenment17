@@ -1,0 +1,13 @@
+Package: libethumb-bin-dbgsym
+Package-Type: ddeb
+Source: ethumb
+Version: 1.7.9-1ppa1~saucy
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 89
+Depends: libethumb-bin (= 1.7.9-1ppa1~saucy)
+Section: debug
+Priority: optional
+Description: debug symbols for libethumb-bin
+Build-Ids: 0be7b574f02e4c26ebaa606f133073d4d2a6a81a 1c16268cc4fada42c36b226a7caf7793cca285ea afd6bac10d7b021ed424e85eea3bd057e06c93ae

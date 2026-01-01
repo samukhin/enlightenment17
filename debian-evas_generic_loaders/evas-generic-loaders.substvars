@@ -1,0 +1,3 @@
+shlibs:Depends=libc6 (>= 2.34), libcairo2 (>= 1.2.4), libeina1 (>= 1.0.0~beta), libgcc-s1 (>= 3.0), libglib2.0-0 (>= 2.12.0), libpoppler118 (>= 22.02.0), librsvg2-2 (>= 2.14.4), libspectre1 (>= 0.2.3), libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4)
+misc:Depends=
+misc:Pre-Depends=

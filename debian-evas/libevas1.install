@@ -1,0 +1,4 @@
+debian/tmp/usr/lib/lib*.so.*
+debian/tmp/usr/lib/evas/modules/engines/*/*/module.so
+debian/tmp/usr/lib/evas/modules/loaders/*/*/*.so
+debian/tmp/usr/lib/evas/modules/savers/*/*/*.so

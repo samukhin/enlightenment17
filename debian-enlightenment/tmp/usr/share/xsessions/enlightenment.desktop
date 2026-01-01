@@ -1,0 +1,25 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Enlightenment
+Name[ca]=Enlightenment
+Name[el]=Enlightenment
+Name[eo]=Enlightenment
+Name[fr]=Enlightenment
+Name[ru]=Enlightenment
+Name[tr]=Enlightenment
+Comment=Log in using Enlightenment (Version 0.17.5)
+Comment[ca]=Iniciar sessió amb Enlightenment (Versió 0.17.5)
+Comment[el]=Είσοδος με το Enlightenment (Έκδοση 0.17.5)
+Comment[eo]=Ensaluti pere de Enlightenment (Versio 0.17.5)
+Comment[es]=Iniciar sesión usando Enlightenment (Versión 0.17.5)
+Comment[fr]=Ouvrir une session Enlightenment (Version 0.17.5)
+Comment[gl]=Iniciar sesión usando Enlightenment (Versión 0.17.5)
+Comment[it]=Accedi con Enlightenment (Versione 0.17.5)
+Comment[ko]=Enlightenment 로그인(버전 0.17.5)
+Comment[pt]=Iniciar sessão no Enlightenment (Versão 0.17.5)
+Comment[ru]=Войти используя Enlightenment (Версия 0.17.5)
+Comment[tr]=Enlightenment kullanarak giriş yaın (Version 0.17.5)
+Icon=/usr/share/enlightenment/data/images/enlightenment.png
+TryExec=/usr/bin/enlightenment_start
+Exec=/usr/bin/enlightenment_start

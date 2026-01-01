@@ -1,0 +1,14 @@
+Package: libethumb-data
+Source: ethumb
+Version: 1.7.9-1ppa1~saucy
+Architecture: all
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 28
+Depends: libethumb
+Section: x11
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: Enlightenment thumbnailing library
+ Thumbnailing library.
+ .
+ This package contains data files.

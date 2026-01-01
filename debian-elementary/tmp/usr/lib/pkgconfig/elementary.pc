@@ -1,0 +1,15 @@
+PACKAGE_TARNAME=elementary
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+pkgdatadir=${prefix}/share/elementary
+themes=${pkgdatadir}/themes
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: elementary
+Description: Mobile device touchscreen widget library
+Requires.private: ethumb_client efreet >= 1.7.9 efreet-mime >= 1.7.9 efreet-trash >= 1.7.9 edbus >= 1.7.9 ecore-fb >= 1.7.9 ecore-x >= 1.7.9 emotion eio ecore-con >= 1.7.9 ecore-imf >= 1.7.9 edje >= 1.7.9 ecore-file >= 1.7.9 ecore-evas >= 1.7.9 ecore >= 1.7.9 evas >= 1.7.9 eet >= 1.7.9 eina >= 1.7.9 
+Version: 1.7.9
+Libs: -L${libdir} -lelementary -lm -leet -levas -lecore -leina -lpthread -lecore_evas -lecore_file -ledje   -lefreet -lefreet_mime -lefreet_trash  -ledbus -ldbus-1  -lethumb_client -ledbus -ldbus-1 -lethumb -levas -lecore -leina -lpthread -lecore_evas -lecore_file -ledje -lemotion -lexif    -lecore_imf  -lecore_con 
+Cflags: -I${includedir}/elementary-1

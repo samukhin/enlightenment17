@@ -1,0 +1,14 @@
+./debian/tmp/usr/lib/libebluez.so.1
+./debian/tmp/usr/lib/libebluez.so.1.7.9
+./debian/tmp/usr/lib/libeconnman0_7x.so.1
+./debian/tmp/usr/lib/libeconnman0_7x.so.1.7.9
+./debian/tmp/usr/lib/libedbus.so.1
+./debian/tmp/usr/lib/libedbus.so.1.7.9
+./debian/tmp/usr/lib/libehal.so.1
+./debian/tmp/usr/lib/libehal.so.1.7.9
+./debian/tmp/usr/lib/libenotify.so.1
+./debian/tmp/usr/lib/libenotify.so.1.7.9
+./debian/tmp/usr/lib/libeofono.so.1
+./debian/tmp/usr/lib/libeofono.so.1.7.9
+./debian/tmp/usr/lib/libeukit.so.1
+./debian/tmp/usr/lib/libeukit.so.1.7.9

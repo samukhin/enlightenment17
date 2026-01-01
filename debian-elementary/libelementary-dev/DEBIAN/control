@@ -1,0 +1,17 @@
+Package: libelementary-dev
+Source: elementary
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 4806
+Depends: libelementary (= 1.7.9-1ppa1~saucy), pkg-config, libeina-dev (>= 1.7.6), libeet-dev (>= 1.7.6), libevas-dev (>= 1.7.6), libecore-dev (>= 1.7.6), libedje-dev (>= 1.7.6), libefreet-dev (>= 1.7.6), libeio-dev (>= 1.7.6), libethumb-dev (>= 1.7.6)
+Section: libdevel
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: Development files for libelementary
+ Elementary is a widget set based on the Enlightenment Foundation Libraries,
+ primarily aimed at creating graphical user interfaces for mobile and embedded
+ devices.
+ .
+ This package contains headers and static libraries for development with
+ libelementary.

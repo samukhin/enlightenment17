@@ -1,0 +1,13 @@
+Package: evas-generic-loaders-dbgsym
+Package-Type: ddeb
+Source: evas-generic-loaders
+Version: 1.7.9-1ppa1~saucy
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 256
+Depends: evas-generic-loaders (= 1.7.9-1ppa1~saucy)
+Section: debug
+Priority: optional
+Description: debug symbols for evas-generic-loaders
+Build-Ids: 1a76670f0376ba19cbfec6c69b92d28f169aabed 39865383e99610c9aa428d0c2b20e7be586488f6 733f699246108bb4e693354cdfe13f4c17e25645 e9a33ccabff6ddbadaf3b23ebb21537ad6dfb4c6

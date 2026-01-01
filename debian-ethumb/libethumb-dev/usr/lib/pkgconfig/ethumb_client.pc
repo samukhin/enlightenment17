@@ -1,0 +1,13 @@
+PACKAGE_TARNAME=ethumb
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: ethumb_client
+Description: Thumbnail Client Library
+Requires: eina >= 1.7.9 ecore >= 1.7.9 edbus >= 1.7.9 ethumb >= 1.7.9
+Version: 1.7.9
+Libs: -L${libdir} -lethumb_client
+Cflags: -I${includedir}/ethumb-1

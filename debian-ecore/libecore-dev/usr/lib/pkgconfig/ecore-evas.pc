@@ -1,0 +1,13 @@
+PACKAGE_TARNAME=ecore
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: ecore-evas
+Description: E core library, Evas module
+Requires.private: ecore-fb >= 1.7.9 ecore-x >= 1.7.9 ecore-input >= 1.7.9 ecore-input-evas >= 1.7.9 evas >= 1.7.9 ecore-ipc >= 1.7.9 ecore >= 1.7.9 eina >= 1.7.9 
+Version: 1.7.9
+Libs: -L${libdir} -lecore_evas
+Cflags: -I${includedir}/ecore-1

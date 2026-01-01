@@ -1,0 +1,4 @@
+./debian/tmp/usr/share/enlightenment/data
+./debian/tmp/usr/share/locale
+./debian/tmp/usr/share/xsessions
+./debian/enlightenment-applications.menu

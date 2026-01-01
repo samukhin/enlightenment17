@@ -1,0 +1,14 @@
+Package: libethumb-dev
+Source: ethumb
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 192
+Depends: libethumb (= 1.7.9-1ppa1~saucy), libethumb-plugins, libemotion-dev, libecore-dev, libeina-dev, libevas-dev, libedje-dev, libedbus-dev
+Section: x11
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: Enlightenment thumbnailing library
+ Thumbnailing library.
+ .
+ This package contains developenment files.

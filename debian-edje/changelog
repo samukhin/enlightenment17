@@ -1,0 +1,222 @@
+edje (1.7.9-1ppa1~saucy) saucy; urgency=low
+
+  * New upload matching current upstream stable release.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Tue, 05 Nov 2013 11:12:59 -0800
+
+edje (1.7.6-1ppa1~saucy) saucy; urgency=low
+
+  * New upload matching current upstream stable release.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Sat, 20 Apr 2013 11:12:59 -0800
+
+edje (1.7.5-1ppa1~saucy) saucy; urgency=low
+
+  * New upload matching current upstream stable release.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Sun, 03 Feb 2013 20:28:59 -0800
+
+edje (1.7.4-1ppa1~saucy) saucy; urgency=low
+
+  * New upload matching current upstream stable release.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Fri, 21 Dec 2012 10:28:59 -0800
+
+edje (1.7.3-1ppa1~saucy) saucy; urgency=low
+
+  * New upload matching current upstream stable release.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Fri, 07 Dec 2012 16:28:59 -0800
+
+edje (1.7.2-1ppa1~saucy) saucy; urgency=low
+
+  * New version containing the following fixes:
+    * fix scale_set with edje containing boxes and/or tables
+    * fix edje_cc to use max, not default compression
+    * fix edje_text_class_set to update the text classes correctly.
+    * fix to not update map uv for proxy
+    * fix to not segv on inheriting group lookups
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Thu, 22 Nov 2012 22:28:59 -0800
+
+edje (1.7.1-1ppa2~saucy) saucy; urgency=low
+
+  * Adding fribidi dependency
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Mon, 12 Nov 2012 10:28:59 -0800
+
+edje (1.7.1-1ppa1~saucy) saucy; urgency=low
+
+  * New upload matching current upstream stable release.
+
+ -- Luis Felipe Strano Moraes <luis.strano@gmail.com>  Mon, 12 Nov 2012 10:28:59 -0800
+
+edje (1.0.999-1) unstable; urgency=low
+
+  * update to work with svn
+
+ -- Michael Bouchaud <michael@substantiel.fr>  Thu, 07 Apr 2011 11:51:32 +0200
+
+edje (1.0.0-1) unstable; urgency=low
+
+  * Upstream release 1.0.0
+  * Add new binaries to libedje-bin: edje_inspector and edje_external_inspector
+  * Add debian/patches/0001_add_edje_convert_back.diff
+    - The edje_convert binary is no longer built by default but we still need
+      it, so put it back in the Makefile
+
+ -- Albin Tonnerre <lutin@debian.org>  Sun, 13 Mar 2011 18:16:28 +0100
+
+edje (1.0.0~beta-1) experimental; urgency=low
+
+  * First upstream beta release
+  * debian/watch: watch the release directory instead of the snapshots
+  * Remove the soname lintian override, no longer needed
+  * Bump Standards-Version, no change required
+  * Drop 01_fix_edje_externals_install_path.diff: applied upstream
+
+ -- Albin Tonnerre <lutin@debian.org>  Sun, 03 Oct 2010 17:05:28 +0200
+
+edje (0.9.99.49898-1) unstable; urgency=low
+
+  * New upstream snapshot
+    - Fix FTBFS on Hurd (Closes: #535771)
+  * Bump Standards-Version, no change required
+  * Remove Xavier Oswald from uploaders, he is no longer active
+  * Switch to '3.0 (quilt)' source format
+  * Add edje_player to libedje-bin
+  * Add patches/01_fix_edje_externals_install_path.diff:
+    - Make the external modules path versionned
+
+ -- Albin Tonnerre <lutin@debian.org>  Thu, 22 Jul 2010 20:08:29 +0200
+
+edje (0.9.93.063-2) unstable; urgency=low
+
+  * Fix the truncated license text in debian/copyright (Closes: #541886)
+  * Drop --disable-rpath from configure options, it is no longer
+    recognized
+  * Bump build-dependency on libeet-dev, edje requires eet >= 1.2.3
+
+ -- Albin Tonnerre <lutin@debian.org>  Mon, 04 Jan 2010 21:11:06 +0100
+
+edje (0.9.93.063-1) unstable; urgency=low
+
+  * New upstream snapshot
+  * Build with -Wl,-z,defs for extra security. Drop 0001-Add-libtool-Wl-
+    as-needed-reordering-workaround.patch, works fine without it
+  * Bump Standards-Version to 3.8.3
+  * Prevent the doc from being built when not necessary, and move
+    doxygen to B-D-I
+  * Remove DEB_DH_STRIP_ARGS, cdbs figures this out
+  * Add new {build-,}dependency on lua 5.1
+  * debian/control: update my email address
+
+ -- Albin Tonnerre <lutin@debian.org>  Sat, 05 Dec 2009 09:29:31 +0100
+
+edje (0.9.92.062-1) unstable; urgency=low
+
+  * New upstream snapshot
+  * Update Standards-Version to 3.8.2
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Sun, 02 Aug 2009 18:55:17 +0200
+
+edje (0.9.92.061-1) unstable; urgency=low
+
+  * New upstream snapshot
+  * Drop Add-libtool-Wl-as-needed-reordering-workaround.patch, no longer needed
+  * Update libedje-bin deps following the evas engines rename
+  * Upload to unstable
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Wed, 24 Jun 2009 22:23:39 +0200
+
+edje (0.9.92.060-1) experimental; urgency=low
+
+  * New SVN snapshot
+    - Drop patches, no longer needed:
+      + 0002-fix-library-soname.patch
+      + 0003-reapply-autofoo.patch
+    - Package renaming due to upstream SONAME change.
+      + Update shlibs and .install files as a consequence
+  * Update Standards-Version, no change needed
+  * Move libedje-dbg to the debug section
+  * libedje-dev now depends on libedje-bin, as it's needed to compile themes
+  * Package name purposedly doesn't match SONAME, in an attempt to make the
+    former a bit more meaningful than libedje-ver-pre-01-0
+    - Override the lintian warning: package-name-doesnt-match-sonames
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Thu, 07 May 2009 13:34:49 +0200
+
+edje (0.9.9.050+svn20090204-1) experimental; urgency=low
+
+  * New SVN snapshot
+   - tighten requirements on libeina-dev
+   - Bump shlibs due to functions added to the API
+   - Add --enable-doc to configure to get the doc built
+   - Update dependency on libevas-engines
+  * Make libedje-bin depend on a recent libembryo-bin
+    - Fixes a bug when using edje_cc while E is running, as it calls embryo_cc,
+      which uses environment variables set by E where it shouldn't
+  * Use a proper short description for libedje-dbg
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Wed, 04 Feb 2009 00:48:09 +0100
+
+edje (0.9.9.050+svn20081206-2) experimental; urgency=low
+
+  * Remove version name from -dev packages name
+  * [lintian] Add ${misc:Depends} to libedje-doc too
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Tue, 06 Jan 2009 22:03:51 +0100
+
+edje (0.9.9.050+svn20081206-1) experimental; urgency=low
+
+  * Upstream SVN snapshot
+    - Packages renamed due to API changes
+      + libedje-dev->libedje-0.9.9.050a-dev, libedje0->libedje-0.9.9.050a
+    - Add debian/patches/{01-fix-library-soname,02-reapply-autofoo}: Use release
+      instead of version-info to create libedje SONAME, to prevent things
+      from breaking when the ABI changes again.
+    - Build-depend and make libedje-0.9.9.050a-dev depend on libeina-0.0.1a-dev
+  * [lintian] Add ${misc:Depends} to package dependencies
+  * [lintian] Fix some escapes in debian/edje_cc.1 and debian/edje_recc.1
+  * Update Standards-Version to 3.8.0
+
+ -- Albin Tonnerre <albin.tonnerre@gmail.com>  Sat, 20 Dec 2008 21:18:58 +0100
+
+edje (0.9.9.050-1.1) experimental; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTBFS: Depend on suitable version of libevas-dev (Closes: #505235)
+
+ -- Joachim Breitner <nomeata@debian.org>  Tue, 11 Nov 2008 00:54:03 +0100
+
+edje (0.9.9.050-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Jan Lübbe <jluebbe@debian.org>  Mon, 10 Nov 2008 00:48:39 +0100
+
+edje (0.9.9.043-1) experimental; urgency=low
+
+  * New upstream release
+  * Docs are now prebuilt in the tarball
+
+ -- Jan Lübbe <jluebbe@debian.org>  Sun, 25 May 2008 18:59:51 +0200
+
+edje (0.5.0.042-2) experimental; urgency=low
+
+  [ Jan Luebbe ]
+  * Add support for keeping patches as git commits and build-depend on quilt
+  * Add workaround for libtool option reordering
+  * Enable -Wl,--as-needed
+
+ -- Jan Lübbe <jluebbe@debian.org>  Sun, 04 May 2008 22:33:41 +0200
+
+edje (0.5.0.042-1) experimental; urgency=low
+
+  * Initial Release (Closes: #468267)
+  * Apply patch from Niv Sardi <xaiki@debian.org> and change it to
+    document the license for data/* and doc/*. Also refer to
+    common-licenses on Debian.
+
+ -- Jan Lübbe <jluebbe@debian.org>  Wed, 19 Mar 2008 14:42:22 +0100
+

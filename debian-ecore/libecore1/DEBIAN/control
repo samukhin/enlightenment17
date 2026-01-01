@@ -1,0 +1,18 @@
+Package: libecore1
+Source: ecore
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 1475
+Depends: libc6 (>= 2.34), libcurl3-gnutls (>= 7.16.2), libeina1 (>= 1.7.9-1ppa1~saucy), libevas1, libglib2.0-0 (>= 2.31.8), libssl3 (>= 3.0.0~~alpha1), libx11-6 (>= 2:1.2.99.901), libxcomposite1 (>= 1:0.4.5), libxcursor1 (>> 1.1.2), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxi6 (>= 2:1.2.99.4), libxinerama1 (>= 2:1.1.4), libxrandr2 (>= 2:1.2.99.3), libxrender1, libxss1, libxtst6
+Conflicts: libecore-svn-05, libecore0
+Replaces: libecore-svn-05, libecore0
+Section: libs
+Priority: optional
+Homepage: http://enlightenment.org
+Description: Core abstraction layer for enlightenment DR 0.17
+ This is the core event abstraction layer and X abstraction layer that makes
+ doing selections, Xdnd, general X stuff, and event loops, timeouts and idle
+ handlers fast, optimized, and convenient. It's a separate library so anyone
+ can make use of the work put into Ecore to make this job easy for
+ applications.

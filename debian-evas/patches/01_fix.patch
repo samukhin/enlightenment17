@@ -1,0 +1,222 @@
+diff --git a/src/lib/canvas/evas_callbacks.c b/src/lib/canvas/evas_callbacks.c
+index dfd8099..20a0dea 100644
+--- a/src/lib/canvas/evas_callbacks.c
++++ b/src/lib/canvas/evas_callbacks.c
+@@ -144,7 +144,7 @@ evas_event_callback_call(Evas *e, Evas_Callback_Type type, void *event_info)
+              fn = (Evas_Func_Node *)l;
+              if ((fn->type == type) && (!fn->delete_me))
+                {
+-                  Evas_Event_Cb func = fn->func;
++                   Evas_Event_Cb func = (Evas_Event_Cb)fn->func;
+                   if (func)
+                     func(fn->data, e, event_info);
+                }
+@@ -227,7 +227,7 @@ evas_object_event_callback_call(Evas_Object *obj, Evas_Callback_Type type, void
+              fn = (Evas_Func_Node *)l;
+              if ((fn->type == type) && (!fn->delete_me))
+                {
+-                  Evas_Object_Event_Cb func = fn->func;
++                   Evas_Object_Event_Cb func = (Evas_Object_Event_Cb)fn->func;
+                   if (func)
+                     func(fn->data, obj->layer->evas, obj, event_info);
+                }
+@@ -307,7 +307,7 @@ evas_object_event_callback_priority_add(Evas_Object *obj, Evas_Callback_Type typ
+    fn = EVAS_MEMPOOL_ALLOC(_mp_fn, Evas_Func_Node);
+    if (!fn) return;
+    EVAS_MEMPOOL_PREP(_mp_fn, fn, Evas_Func_Node);
+-   fn->func = func;
++    fn->func = (void (*)())func;
+    fn->data = (void *)data;
+    fn->type = type;
+    fn->priority = priority;
+@@ -410,7 +410,7 @@ evas_event_callback_priority_add(Evas *e, Evas_Callback_Type type, Evas_Callback
+    fn = EVAS_MEMPOOL_ALLOC(_mp_fn, Evas_Func_Node);
+    if (!fn) return;
+    EVAS_MEMPOOL_PREP(_mp_fn, fn, Evas_Func_Node);
+-   fn->func = func;
++    fn->func = (void (*)())func;
+    fn->data = (void *)data;
+    fn->type = type;
+    fn->priority = priority;
+diff --git a/src/modules/loaders/gif/evas_image_load_gif.c b/src/modules/loaders/gif/evas_image_load_gif.c
+index 6b6ef3d..a19fda4 100644
+--- a/src/modules/loaders/gif/evas_image_load_gif.c
++++ b/src/modules/loaders/gif/evas_image_load_gif.c
+@@ -336,18 +336,18 @@ _evas_image_load_frame_image_data(Image_Entry *ie, GifFileType *gif, Image_Entry
+    bg = gif->SBackGroundColor;
+    cmap = (gif->Image.ColorMap ? gif->Image.ColorMap : gif->SColorMap);
+ 
+-   if (!cmap)
+-     {
+-        DGifCloseFile(gif);
+-        for (i = 0; i < scale_h; i++)
+-          {
+-             free(rows[i]);
+-          }
+-        free(rows);
+-        if (frame->data) free(frame->data);
+-        *error = EVAS_LOAD_ERROR_CORRUPT_FILE;
+-        return EINA_FALSE;
+-     }
++      if (!cmap)
++      {
++         DGifCloseFile(gif, NULL);
++         for (i = 0; i < scale_h; i++)
++           {
++              free(rows[i]);
++           }
++         free(rows);
++         if (frame->data) free(frame->data);
++         *error = EVAS_LOAD_ERROR_CORRUPT_FILE;
++         return EINA_FALSE;
++      }
+ 
+    /* get the background value */
+    r = cmap->Colors[bg].Red;
+@@ -722,28 +722,28 @@ evas_image_load_file_head_gif(Image_Entry *ie, const char *file, const char *key
+         h /= ie->load_opts.scale_down_by;
+      }
+ 
+-   if ((w < 1) || (h < 1) || (w > IMG_MAX_SIZE) || (h > IMG_MAX_SIZE) ||
+-       IMG_TOO_BIG(w, h))
+-     {
+-        DGifCloseFile(gif);
+-        if (IMG_TOO_BIG(w, h))
+-          *error = EVAS_LOAD_ERROR_RESOURCE_ALLOCATION_FAILED;
+-        else
+-          *error = EVAS_LOAD_ERROR_GENERIC;
+-        return EINA_FALSE;
+-     }
++    if ((w < 1) || (h < 1) || (w > IMG_MAX_SIZE) || (h > IMG_MAX_SIZE) ||
++        IMG_TOO_BIG(w, h))
++      {
++         DGifCloseFile(gif, NULL);
++         if (IMG_TOO_BIG(w, h))
++           *error = EVAS_LOAD_ERROR_RESOURCE_ALLOCATION_FAILED;
++         else
++           *error = EVAS_LOAD_ERROR_GENERIC;
++         return EINA_FALSE;
++      }
+    ie->w = w;
+    ie->h = h;
+ 
+    do
+      {
+-        if (DGifGetRecordType(gif, &rec) == GIF_ERROR)
+-          {
+-             /* PrintGifError(); */
+-             DGifCloseFile(gif);
+-             *error = EVAS_LOAD_ERROR_UNKNOWN_FORMAT;
+-             return EINA_FALSE;
+-          }
++         if (DGifGetRecordType(gif, &rec) == GIF_ERROR)
++           {
++              /* PrintGifError(); */
++              DGifCloseFile(gif, NULL);
++              *error = EVAS_LOAD_ERROR_UNKNOWN_FORMAT;
++              return EINA_FALSE;
++           }
+ 
+         /* image descript info */
+         if (rec == IMAGE_DESC_RECORD_TYPE)
+@@ -751,21 +751,21 @@ evas_image_load_file_head_gif(Image_Entry *ie, const char *file, const char *key
+              int img_code;
+              GifByteType *img;
+ 
+-             if (DGifGetImageDesc(gif) == GIF_ERROR)
+-               {
+-                  /* PrintGifError(); */
+-                  DGifCloseFile(gif);
+-                  *error = EVAS_LOAD_ERROR_UNKNOWN_FORMAT;
+-                  return EINA_FALSE;
+-               }
++              if (DGifGetImageDesc(gif) == GIF_ERROR)
++                {
++                   /* PrintGifError(); */
++                   DGifCloseFile(gif, NULL);
++                   *error = EVAS_LOAD_ERROR_UNKNOWN_FORMAT;
++                   return EINA_FALSE;
++                }
+              /* we have to count frame, so use DGifGetCode and skip decoding */
+-             if (DGifGetCode(gif, &img_code, &img) == GIF_ERROR)
+-               {
+-                  /* PrintGifError(); */
+-                  DGifCloseFile(gif);
+-                  *error = EVAS_LOAD_ERROR_UNKNOWN_FORMAT;
+-                  return EINA_FALSE;
+-               }
++              if (DGifGetCode(gif, &img_code, &img) == GIF_ERROR)
++                {
++                   /* PrintGifError(); */
++                   DGifCloseFile(gif, NULL);
++                   *error = EVAS_LOAD_ERROR_UNKNOWN_FORMAT;
++                   return EINA_FALSE;
++                }
+              while (img)
+                {
+                   img = NULL;
+@@ -818,9 +818,9 @@ evas_image_load_file_head_gif(Image_Entry *ie, const char *file, const char *key
+         ie->frames = NULL;
+      }
+ 
+-   DGifCloseFile(gif);
+-   *error = EVAS_LOAD_ERROR_NONE;
+-   return EINA_TRUE;
++    DGifCloseFile(gif, NULL);
++    *error = EVAS_LOAD_ERROR_NONE;
++    return EINA_TRUE;
+ }
+ 
+ static Eina_Bool
+@@ -884,9 +884,9 @@ evas_image_load_specific_frame(Image_Entry *ie, const char *file, int frame_inde
+         return EINA_FALSE;
+      }
+ 
+-   ie->frames = eina_list_append(ie->frames, frame);
+-   DGifCloseFile(gif);
+-   return EINA_TRUE;
++    ie->frames = eina_list_append(ie->frames, frame);
++    DGifCloseFile(gif, NULL);
++    return EINA_TRUE;
+ }
+ 
+ static Eina_Bool
+@@ -953,15 +953,15 @@ evas_image_load_file_data_gif(Image_Entry *ie, const char *file, const char *key
+                   *error = EVAS_LOAD_ERROR_UNKNOWN_FORMAT;
+                   return EINA_FALSE;
+                }
+-             if (!evas_image_load_file_data_gif_internal(ie, frame, error))
+-               {
+-                  if (fd) close(fd);
+-                  *error = EVAS_LOAD_ERROR_UNKNOWN_FORMAT;
+-                  return EINA_FALSE;
+-               }
+-             DGifCloseFile(gif);
+-             *error = EVAS_LOAD_ERROR_NONE;
+-             return EINA_TRUE;
++              if (!evas_image_load_file_data_gif_internal(ie, frame, error))
++                {
++                   if (fd) close(fd);
++                   *error = EVAS_LOAD_ERROR_UNKNOWN_FORMAT;
++                   return EINA_FALSE;
++                }
++              DGifCloseFile(gif, NULL);
++              *error = EVAS_LOAD_ERROR_NONE;
++              return EINA_TRUE;
+           }
+      }
+    /* current frame does is not exist */
+@@ -1078,10 +1078,10 @@ evas_image_load_frame_duration_gif(Image_Entry *ie, const char *file, const int
+                   DGifGetExtensionNext(gif, &ext);
+                }
+          }
+-     } while (rec != TERMINATE_RECORD_TYPE);
++      } while (rec != TERMINATE_RECORD_TYPE);
+ 
+-   DGifCloseFile(gif);
+-   return duration;
++    DGifCloseFile(gif, NULL);
++    return duration;
+ }
+ 
+ static int

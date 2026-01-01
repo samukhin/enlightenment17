@@ -1,0 +1,14 @@
+PACKAGE_TARNAME=ecore
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: ecore-x
+Description: E core library, X module
+Requires.private: ecore-input >= 1.7.9 ecore >= 1.7.9 eina >= 1.7.9 
+Version: 1.7.9
+Libs: -L${libdir} -lecore_x
+Libs.private: -L/usr/X11R6/lib -lX11 -lXext -lXcursor -lX11 -lXcomposite  -lXdamage -lXext -lXfixes -lXinerama  -lXrandr -lXrender -lXtst -lXss -lXi
+Cflags: -I${includedir}/ecore-1 

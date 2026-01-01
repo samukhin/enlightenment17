@@ -1,0 +1,18 @@
+Package: e17
+Version: 1:0.17.5-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 5757
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.34), libdbus-1-3 (>= 1.9.14), libecore1 (>= 1.7.9), libedbus1 (>= 1.7.9), libedje1, libeet1 (>= 1.7.9-1ppa1~saucy), libeeze1 (>= 1.7.9), libefreet1 (>= 1.7.9), libeina1 (>= 1.7.9-1ppa1~saucy), libeio0 (>= 1.7.9), libelementary, libemotion0 (>= 1.7.9), libevas1, libpam0g (>= 0.99.7.1), libxcb-keysyms1 (>= 0.4.0), libxcb-shape0, libxcb1, e17-data (= 1:0.17.5-1ppa1~saucy), libeet-bin, evas-generic-loaders, libedje-bin
+Conflicts: emodule-notification
+Provides: x-window-manager
+Section: x11
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: The Enlightenment DR17 Window Manager
+ Enlightenment is an advanced window manager for X11. Unique
+ features include: a fully animated background, nice drop shadows
+ around windows, backed by an extremely clean and optimized
+ foundation of APIs.
+ .
+ This package contains the core files for Enlightenment DR17.

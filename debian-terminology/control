@@ -1,0 +1,14 @@
+Source: terminology
+Section: x11
+Priority: optional
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Build-Depends: cdbs, debhelper (>= 6), automake1.11, 
+ autopoint, subversion, libtool, pkg-config, 
+ libelementary-dev, libexif-dev
+Standards-Version: 3.8.2
+Homepage: http://www.enlightenment.org
+
+Package: terminology
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Terminal using EFL

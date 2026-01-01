@@ -1,0 +1,14 @@
+Package: libemotion-dev
+Source: emotion
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 141
+Depends: libemotion0 (= 1.7.9-1ppa1~saucy), libecore-dev (>= 1.7.6), libevas-dev (>= 1.7.6), libeina-dev (>= 1.7.6), pkg-config
+Section: libdevel
+Priority: optional
+Homepage: http://enlightenment.org
+Description: Emotion headers and static libraries
+ Enlightenment's audio and video integration.
+ .
+ This package contains headers and static libraries for the Emotion library.

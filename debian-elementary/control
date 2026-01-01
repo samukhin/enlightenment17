@@ -1,0 +1,74 @@
+Source: elementary
+Section: libs
+Priority: optional
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Uploaders: Hannes Janetzek <hannes.janetzek@gmail.com>
+Build-Depends: debhelper (>= 6), cdbs, doxygen, automake1.11, 
+ autopoint, subversion, libtool, pkg-config,
+ libeina-dev (>= 1.7.6), libeet-dev (>= 1.7.6),
+ libevas-dev (>= 1.7.6), libecore-dev (>= 1.7.6), 
+ libedje-dev (>= 1.7.6), libefreet-dev (>= 1.7.6),
+ libeio-dev (>= 1.7.6),  libeet-bin (>= 1.7.6),
+ libethumb-dev (>= 1.7.6)
+Standards-Version: 3.9.0
+Homepage: http://www.enlightenment.org
+
+Package: libelementary
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libelementary-data (= ${source:Version})
+Description: The Elementary widget set library
+ Elementary is a widget set based on the Enlightenment Foundation Libraries,
+ primarily aimed at creating graphical user interfaces for mobile and embedded
+ devices.
+
+Package: libelementary-bin
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libelementary
+Description: The Elementary widget set library - helper programs
+ Elementary is a widget set based on the Enlightenment Foundation Libraries,
+ primarily aimed at creating graphical user interfaces for mobile and embedded
+ devices.
+ .
+ This package contains the elementary_run and elementary_quicklaunch helpers
+
+Package: libelementary-data
+Architecture: any
+Depends: ${misc:Depends}
+Description: runtime data-files for libelementary
+ Elementary is a widget set based on the Enlightenment Foundation Libraries,
+ primarily aimed at creating graphical user interfaces for mobile and embedded
+ devices.
+ .
+ This package contains graphics and styles needed by applications using
+ elementary.
+
+Package: libelementary-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libelementary (= ${binary:Version}), pkg-config,
+ libeina-dev (>= 1.7.6), libeet-dev (>= 1.7.6),
+ libevas-dev (>= 1.7.6), libecore-dev (>= 1.7.6), 
+ libedje-dev (>= 1.7.6), libefreet-dev (>= 1.7.6),
+ libeio-dev (>= 1.7.6), libethumb-dev (>= 1.7.6)
+Description: Development files for libelementary
+ Elementary is a widget set based on the Enlightenment Foundation Libraries,
+ primarily aimed at creating graphical user interfaces for mobile and embedded
+ devices.
+ .
+ This package contains headers and static libraries for development with
+ libelementary.
+
+Package: libelementary-dbg
+Architecture: any
+Section: debug
+Depends: ${misc:Depends}, libelementary (= ${binary:Version})
+Priority: extra
+Description: debugging symbols for use with libelementary
+ Elementary is a widget set based on the Enlightenment Foundation Libraries,
+ primarily aimed at creating graphical user interfaces for mobile and embedded
+ devices.
+ .
+ This package contains unstripped shared libraries. It is provided primarily
+ to provide a backtrace with names in a debugger, this makes it somewhat easier
+ to interpret core dumps. The libraries are installed in /usr/lib/debug and
+ are automatically used by gdb.

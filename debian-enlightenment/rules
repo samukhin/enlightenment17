@@ -1,0 +1,47 @@
+#!/usr/bin/make -f
+
+# include /usr/share/cdbs/1/class/autotools.mk
+# include /usr/share/cdbs/1/rules/debhelper.mk
+
+export DH_VERBOSE=1
+unexport LANG
+
+CFLAGS += -fvisibility=hidden -O2
+LDFLAGS += -fvisibility=hidden
+
+DEB_HOST_GNU_SYSTEM=$(shell dpkg-architecture -qDEB_HOST_GNU_SYSTEM)
+DEB_HOST_GNU_CPU=$(shell dpkg-architecture -qDEB_HOST_GNU_CPU)
+SVN_RELEASE=$(shell grep -o ver-svn-.. configure.ac)
+ARCH_PATH=$(DEB_HOST_GNU_SYSTEM)-$(DEB_HOST_GNU_CPU)-$(SVN_RELEASE)
+
+%:
+	dh $@
+
+override_dh_makeshlibs:
+	dh_makeshlibs -V
+
+override_dh_auto_clean:
+	-$(MAKE) maintainer-clean
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod a=rx,u+xs debian/e17/usr/lib/enlightenment/utils/enlightenment_sys
+	chmod a=rx,u+xs debian/e17/usr/lib/enlightenment/modules/cpufreq/*/freqset
+
+install/e17-data::
+	gzip -9 debian/tmp/usr/share/enlightenment/doc/*.txt
+	rm debian/tmp/usr/share/enlightenment/COPYING
+
+install/e17::
+	sed "s/ARCH_PATH/$(ARCH_PATH)/" debian/e17.lintian-overrides.in > debian/e17.lintian-overrides
+
+#binary-predeb/e17::
+#	chmod a=rx,u+xs debian/e17/usr/lib/enlightenment/utils/enlightenment_sys
+#	chmod a=rx,u+xs debian/e17/usr/lib/enlightenment/modules/cpufreq/*/freqset
+
+clean/e17::
+	rm -f debian/e17.lintian-overrides
+
+
+DEB_INSTALL_MANPAGES_e17 := $(DEB_SRCDIR)/debian/enlightenment.1 $(DEB_SRCDIR)/debian/enlightenment_*.1
+DEB_CONFIGURE_EXTRA_FLAGS := --disable-rpat

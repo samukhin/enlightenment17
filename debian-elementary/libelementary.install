@@ -1,0 +1,2 @@
+debian/tmp/usr/lib/libelementary*.so.*
+debian/tmp/usr/lib/edje/modules/elm/*/module.so

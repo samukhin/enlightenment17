@@ -1,0 +1,13 @@
+Package: libeeze1-dbgsym
+Package-Type: ddeb
+Source: eeze
+Version: 1.7.9-1ppa1~saucy
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 76
+Depends: libeeze1 (= 1.7.9-1ppa1~saucy)
+Section: debug
+Priority: optional
+Description: debug symbols for libeeze1
+Build-Ids: 0a8ed64213945c9d56bf4d364116a542d6873d4e

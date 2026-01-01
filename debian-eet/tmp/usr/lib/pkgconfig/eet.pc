@@ -1,0 +1,14 @@
+PACKAGE_TARNAME=eet
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: eet
+Description: Library for speedy data storage, retrieval, and compression
+Version: 1.7.9
+Requires.private: eina >= 1.7.9 openssl  zlib
+Libs: -L${libdir} -leet
+Libs.private:  -ljpeg  -lm
+Cflags: -I${includedir}/eet-1

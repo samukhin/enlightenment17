@@ -1,0 +1,17 @@
+PACKAGE_TARNAME=embryo
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}/embryo
+embryoincludedir=${datarootdir}/include
+docdir=${datarootdir}/doc/${PACKAGE_TARNAME}
+
+Name: embryo
+Description: A small virtual machine engine and bytecode compiler
+Requires.private: 
+Version: 1.7.9
+Libs: -L${libdir} -lembryo
+Libs.private:  -lm
+Cflags: -I${includedir}/embryo-1

@@ -1,0 +1,56 @@
+Source: ethumb
+Section: x11
+Priority: optional
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Uploaders: Hannes Janetzek <hannes.janetzek@gmail.com>
+Build-Depends: cdbs, debhelper (>= 6), 
+ automake1.11, subversion, libtool, pkg-config,
+ libeina-dev (>= 1.7.6), libeet-dev (>= 1.7.6),
+ libevas-dev (>= 1.7.6), libecore-dev (>= 1.7.6), 
+ libedje-dev (>= 1.7.6),  libedbus-dev (>= 1.7.6), 
+ libemotion-dev (>= 1.7.6), libexif-dev
+Standards-Version: 3.8.2
+Homepage: http://www.enlightenment.org
+
+Package: libethumb
+Architecture: any
+Depends: ${shlibs:Depends}, libethumb-bin, libethumb-data
+Description: Enlightenment thumbnailing library
+ Thumbnailing library.
+ .
+ This package contains the ethumb library.
+
+Package: libethumb-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, libethumb
+Description: Enlightenment thumbnailing library
+ Thumbnailing library.
+ .
+ This package contains plugins.
+
+Package: libethumb-bin
+Architecture: any
+Depends: ${shlibs:Depends}, libethumb
+Description: Enlightenment thumbnailing library
+ Thumbnailing library.
+ .
+ This package contains binary files.
+
+Package: libethumb-dev
+Architecture: any
+Depends: libethumb (= ${source:Version}), libethumb-plugins, 
+ libemotion-dev, libecore-dev, libeina-dev, 
+ libevas-dev, libedje-dev, libedbus-dev
+Description: Enlightenment thumbnailing library
+ Thumbnailing library.
+ .
+ This package contains developenment files.
+
+Package: libethumb-data
+Architecture: all
+Depends: libethumb
+Description: Enlightenment thumbnailing library
+ Thumbnailing library.
+ .
+ This package contains data files.
+

@@ -1,0 +1,13 @@
+PACKAGE_TARNAME=eeze
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: eeze
+Description: device convenience library for efl
+Requires.private: ecore >= 1.7.9 eina >= 1.7.9 libudev
+Version: 1.7.9
+Libs: -L${libdir} -leeze
+Cflags: -I${includedir}/eeze-1

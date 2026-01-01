@@ -1,0 +1,66 @@
+Source: ecore
+Section: libs
+Priority: optional
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Uploaders: Cédric Schieli <cschieli@gmail.com>
+Build-Depends: debhelper (>= 7), libeina-dev (>= 1.7.6),
+ libeet-dev (>= 1.7.6), libevas-dev (>= 1.7.6), libssl-dev,
+ libcurl4-gnutls-dev, libxcursor-dev, libxss-dev, libxrender-dev, libxinerama-dev,
+ libxrandr-dev, libxext-dev, libxcomposite-dev,
+ libxdamage-dev, x11proto-xext-dev, libxtst-dev, libglib2.0-dev, automake, libtool, 
+ autopoint | gettext, cvs, libfribidi-dev
+Recommends: libxp-dev
+Build-Depends-Indep: doxygen
+Standards-Version: 3.8.3
+Homepage: http://enlightenment.org
+Vcs-Bzr: https://code.launchpad.net/~cschieli/freebox-ecore/daily-packaging
+
+Package: libecore1
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libecore-svn-05, libecore0
+Replaces: libecore-svn-05, libecore0
+Description: Core abstraction layer for enlightenment DR 0.17
+ This is the core event abstraction layer and X abstraction layer that makes
+ doing selections, Xdnd, general X stuff, and event loops, timeouts and idle
+ handlers fast, optimized, and convenient. It's a separate library so anyone
+ can make use of the work put into Ecore to make this job easy for
+ applications.
+
+Package: libecore-dev
+Architecture: any
+Section: libdevel
+Suggests: libecore-doc
+Depends: ${misc:Depends}, libecore1 (= ${binary:Version}),
+         libeet-dev (>= 1.7.6), libevas-dev (>= 1.7.6), 
+         libeina-dev (>= 1.7.6), pkg-config,
+         libssl-dev, libcurl4-gnutls-dev, libxcursor-dev, libxss-dev,
+         libxrender-dev, libxinerama-dev, libxrandr-dev, libxext-dev,
+         libxcomposite-dev, libxdamage-dev, x11proto-xext-dev, libxtst-dev,
+         libglib2.0-dev
+Recommends: libxp-dev
+Description: Ecore headers and static libraries
+ This is the core event abstraction layer and X abstraction layer that makes
+ doing selections, Xdnd, general X stuff, and event loops, timeouts and idle
+ handlers fast, optimized, and convenient. It's a separate library so anyone
+ can make use of the work put into Ecore to make this job easy for
+ applications.
+ .
+ This package contains headers and static libraries for the Ecore library.
+
+Package: libecore-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: ${misc:Depends}, libecore1 (= ${binary:Version})
+Description: Debugging symbols for libecore
+ This is the core event abstraction layer and X abstraction layer that makes
+ doing selections, Xdnd, general X stuff, and event loops, timeouts and idle
+ handlers fast, optimized, and convenient. It's a separate library so anyone
+ can make use of the work put into Ecore to make this job easy for
+ applications
+ .
+ This package contains unstripped shared libraries. It is provided primarily
+ to provide a backtrace with names in a debugger, this makes it somewhat easier
+ to interpret core dumps. The libraries are installed in /usr/lib/debug and
+ are automatically used by gdb.

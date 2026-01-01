@@ -1,0 +1,18 @@
+Package: e17-dev
+Source: e17
+Version: 1:0.17.5-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 424
+Depends: e17 (= 1:0.17.5-1ppa1~saucy), libeina-dev (>= 1.7.6), libeet-dev (>= 1.7.6), libevas-dev (>= 1.7.6), libecore-dev (>= 1.7.6), libembryo-dev (>= 1.7.6), libedje-dev (>= 1.7.6), libedbus-dev (>= 1.7.6), libefreet-dev (>= 1.7.6), libeeze-dev (>= 1.7.6)
+Section: devel
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: Enlightenment headers, static libraries and documentation
+ Enlightenment is an advanced window manager for X11. Unique
+ features include: a fully animated background, nice drop shadows
+ around windows, backed by an extremely clean and optimized
+ foundation of APIs.
+ .
+ This package contains headers, static libraries and documentation for
+ enlightenment.

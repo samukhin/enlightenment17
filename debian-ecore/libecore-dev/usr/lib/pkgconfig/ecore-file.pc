@@ -1,0 +1,13 @@
+PACKAGE_TARNAME=ecore
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: ecore-file
+Description: E core library, File module
+Requires.private: ecore-con >= 1.7.9 ecore >= 1.7.9 eina >= 1.7.9 
+Version: 1.7.9
+Libs: -L${libdir} -lecore_file
+Cflags: -I${includedir}/ecore-1

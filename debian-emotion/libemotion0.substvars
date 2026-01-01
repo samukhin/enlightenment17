@@ -1,0 +1,3 @@
+shlibs:Depends=libc6 (>= 2.34), libecore1 (>= 1.7.9), libeet1 (>= 1.2.3), libeina1 (>= 1.0.0-1-svn60184), libeio0 (>= 1.7.9), libemotion0 (>= 1.7.9), libevas1, libxine2 (>= 1.2.0)
+misc:Depends=
+misc:Pre-Depends=

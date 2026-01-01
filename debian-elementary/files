@@ -1,0 +1,6 @@
+elementary_1.7.9-1ppa1~saucy_amd64.buildinfo libs optional
+libelementary-bin_1.7.9-1ppa1~saucy_amd64.deb libs optional
+libelementary-data_1.7.9-1ppa1~saucy_amd64.deb libs optional
+libelementary-dbg_1.7.9-1ppa1~saucy_amd64.deb debug extra
+libelementary-dev_1.7.9-1ppa1~saucy_amd64.deb libdevel optional
+libelementary_1.7.9-1ppa1~saucy_amd64.deb libs optional

@@ -1,0 +1,13 @@
+PACKAGE_TARNAME=emotion
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: emotion
+Description: Emotion evas based multimedia library
+Requires.private: eio >= 1.7.9 ecore >= 1.7.9 evas >= 1.7.9 eet >= 1.7.9 eina >= 1.7.9
+Version: 1.7.9
+Libs: -L${libdir} -lemotion
+Cflags: -I${includedir}/emotion-1

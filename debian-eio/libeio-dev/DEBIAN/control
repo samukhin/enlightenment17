@@ -1,0 +1,14 @@
+Package: libeio-dev
+Source: eio
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 219
+Depends: libeio0 (= 1.7.9-1ppa1~saucy), libecore-dev (>= 1.7.6), libeina-dev (>= 1.7.6), pkg-config
+Section: libdevel
+Priority: optional
+Homepage: http://enlightenment.org
+Description: Eio headers and static libraries
+ Enlightenment Input Output Library.
+ .
+ This package contains headers and static libraries for the Eio library.

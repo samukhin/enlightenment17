@@ -1,0 +1,4 @@
+./debian/tmp/usr/lib/libembryo.so.1
+./debian/tmp/usr/lib/libembryo.so.1.7.9
+./debian/tmp/usr/bin/embryo_cc
+./debian/tmp/usr/share/embryo/include/default.inc

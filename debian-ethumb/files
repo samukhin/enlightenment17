@@ -1,0 +1,9 @@
+ethumb_1.7.9-1ppa1~saucy_amd64.buildinfo x11 optional
+libethumb-bin-dbgsym_1.7.9-1ppa1~saucy_amd64.ddeb debug optional automatic=yes
+libethumb-bin_1.7.9-1ppa1~saucy_amd64.deb x11 optional
+libethumb-data_1.7.9-1ppa1~saucy_all.deb x11 optional
+libethumb-dbgsym_1.7.9-1ppa1~saucy_amd64.ddeb debug optional automatic=yes
+libethumb-dev_1.7.9-1ppa1~saucy_amd64.deb x11 optional
+libethumb-plugins-dbgsym_1.7.9-1ppa1~saucy_amd64.ddeb debug optional automatic=yes
+libethumb-plugins_1.7.9-1ppa1~saucy_amd64.deb x11 optional
+libethumb_1.7.9-1ppa1~saucy_amd64.deb x11 optional

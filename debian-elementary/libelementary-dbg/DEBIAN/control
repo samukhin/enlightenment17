@@ -1,0 +1,19 @@
+Package: libelementary-dbg
+Source: elementary
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 7471
+Depends: libelementary (= 1.7.9-1ppa1~saucy)
+Section: debug
+Priority: extra
+Homepage: http://www.enlightenment.org
+Description: debugging symbols for use with libelementary
+ Elementary is a widget set based on the Enlightenment Foundation Libraries,
+ primarily aimed at creating graphical user interfaces for mobile and embedded
+ devices.
+ .
+ This package contains unstripped shared libraries. It is provided primarily
+ to provide a backtrace with names in a debugger, this makes it somewhat easier
+ to interpret core dumps. The libraries are installed in /usr/lib/debug and
+ are automatically used by gdb.

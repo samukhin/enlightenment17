@@ -1,0 +1,4 @@
+ecore_1.7.9-1ppa1~saucy_amd64.buildinfo libs optional
+libecore-dbg_1.7.9-1ppa1~saucy_amd64.deb debug extra
+libecore-dev_1.7.9-1ppa1~saucy_amd64.deb libdevel optional
+libecore1_1.7.9-1ppa1~saucy_amd64.deb libs optional

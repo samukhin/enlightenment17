@@ -1,0 +1,20 @@
+Package: libevas-dev
+Source: evas
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 2198
+Depends: libevas1 (= 1.7.9-1ppa1~saucy), libjpeg-turbo8-dev, libx11-dev, libfreetype6-dev, libfontconfig1-dev, pkg-config
+Suggests: libevas-doc
+Section: libdevel
+Priority: optional
+Homepage: http://www.enlightenment.org
+Description: Enlightenment DR17 advanced canvas library development files
+ Evas is an advanced canvas library, providing six engines for rendering: X11,
+ OpenGL (hardware accelerated), DirectFB, the framebuffer, Microsoft Windows
+ and Qtopia.
+ .
+ Due to its simple API, evas can be developed with rapidly, and cleanly.
+ .
+ This package provides headers and static libraries required to develop against
+ evas.

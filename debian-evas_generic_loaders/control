@@ -1,0 +1,19 @@
+Source: evas-generic-loaders
+Section: x11
+Priority: optional
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Build-Depends: cdbs, debhelper (>= 7), libtool, automake1.11, subversion,
+ libeina-dev (>= 1.7.6), libeet-dev (>= 1.7.6), 
+ libevas-dev (>= 1.7.6), libecore-dev (>= 1.7.6),
+ libspectre-dev, libpoppler-dev, libgstreamer1.0-dev, libgstreamer-plugins-base1.0-dev, librsvg2-dev
+Standards-Version: 3.8.3
+Homepage: http://www.enlightenment.org
+
+Package: evas-generic-loaders
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Evas Generic Loaders
+ .
+ Additional "generic" loaders for Evas that are stand-alone executables
+ evas may run from its generic loader module. adds support for:
+ PDF, PS, MPG/AVI/OGV/MOV/MKV/WMV etc. (using Gstreamer)

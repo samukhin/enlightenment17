@@ -1,0 +1,14 @@
+PACKAGE_TARNAME=eina
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+docdir=${prefix}/share/doc/${PACKAGE_TARNAME}
+
+Name: Eina
+Description: A Library that implements fast data types and miscellaneous tools
+Requires.private: 
+Version: 1.7.9
+Libs: -L${libdir} -leina -lpthread
+Libs.private: -lpthread       -lm
+Cflags: -I${includedir}/eina-1 -I${includedir}/eina-1/eina

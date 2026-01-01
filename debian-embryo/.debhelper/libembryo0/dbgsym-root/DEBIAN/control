@@ -1,0 +1,13 @@
+Package: libembryo0-dbgsym
+Package-Type: ddeb
+Source: embryo
+Version: 1.7.9-1ppa1~saucy
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 235
+Depends: libembryo0 (= 1.7.9-1ppa1~saucy)
+Section: debug
+Priority: optional
+Description: debug symbols for libembryo0
+Build-Ids: d750fb3433151ee48652cc47ac0e717fc2b54a50 f0570e34f81627eeef4e9e74a9171bd13851e530

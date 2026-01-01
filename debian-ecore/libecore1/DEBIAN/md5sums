@@ -1,0 +1,13 @@
+c0be6b0248a081171e2e0e64bdfb839d  usr/lib/libecore.so.1.7.9
+d7346705b51638bfd52cb453306d3095  usr/lib/libecore_con.so.1.7.9
+ab56d81407e6e16738f4b68c51e39c2b  usr/lib/libecore_evas.so.1.7.9
+adee8cac7398cc76fe6bd66d6d07cbef  usr/lib/libecore_fb.so.1.7.9
+cd45b89419c778b6809893e859485b46  usr/lib/libecore_file.so.1.7.9
+301fda0c437fc951ae808b3ef673092c  usr/lib/libecore_imf.so.1.7.9
+20101afe500c266f7d48cc3359afab36  usr/lib/libecore_imf_evas.so.1.7.9
+a3a32ea229957045ebbf742bc47cb848  usr/lib/libecore_input.so.1.7.9
+972b117130e568b266087cdde0a58929  usr/lib/libecore_input_evas.so.1.7.9
+a1ea7d4aad9b715f4cc49d2c9f7677b4  usr/lib/libecore_ipc.so.1.7.9
+6dce7e8eb86d1c734809ec4691282a32  usr/lib/libecore_x.so.1.7.9
+c5cee65d29c3ef0448e93cf69563f089  usr/share/doc/libecore1/changelog.Debian.gz
+24381b270233d79ddac5677ed0bb21ce  usr/share/doc/libecore1/copyright

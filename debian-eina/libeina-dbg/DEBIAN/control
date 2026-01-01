@@ -1,0 +1,26 @@
+Package: libeina-dbg
+Source: eina
+Version: 1.7.9-1ppa1~saucy
+Architecture: amd64
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Installed-Size: 1128
+Depends: libeina1 (= 1.7.9-1ppa1~saucy)
+Section: debug
+Priority: extra
+Homepage: http://www.enlightenment.org
+Description: debugging symbols for use with libeina
+ Eina is a multi-platform library that provides optimized data types and a few
+ tools. It supports the following data types:
+  - Array
+  - Hash Table
+  - Double-linked list
+  - Red-black tree
+  - Shared string
+  - Access Content types
+    + Accessor: can access items of a container randomly
+    + Iterator: can access items of a container sequentially
+ .
+ This package contains unstripped shared libraries. It is provided primarily
+ to provide a backtrace with names in a debugger, this makes it somewhat easier
+ to interpret core dumps. The libraries are installed in /usr/lib/debug and
+ are automatically used by gdb.

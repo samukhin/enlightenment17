@@ -1,0 +1,26 @@
+Source: eeze
+Section: libs
+Priority: extra
+Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
+Uploaders: Hannes Janetzek <hannes.janetzek@gmail.com>
+Build-Depends: debhelper (>= 7), libtool, automake, subversion, pkg-config,
+ libudev-dev,
+ libeina-dev (>= 1.7.6), libecore-dev (>= 1.7.6)
+Standards-Version: 3.8.4
+Homepage: http://trac.enlightenment.org/e/wiki/Eeze
+
+Package: libeeze1
+Provides: libeeze0
+Conflicts: libeeze0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Eeze is a library for manipulating devices through udev with a simple and fast api.
+ Eeze is a library for manipulating devices through udev with a simple and fast api. It interfaces directly with libudev, avoiding such middleman daemons as udisks/upower or hal, to immediately gather device information the instant it becomes known to the system. 
+
+Package: libeeze-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libeeze1 (= ${binary:Version}), libudev-dev,
+ libeina-dev (>= 1.7.6), libecore-dev (>= 1.7.6)
+Description: Eeze is a library for manipulating devices through udev with a simple and fast api.
+ Eeze is a library for manipulating devices through udev with a simple and fast api. It interfaces directly with libudev, avoiding such middleman daemons as udisks/upower or hal, to immediately gather device information the instant it becomes known to the system. 

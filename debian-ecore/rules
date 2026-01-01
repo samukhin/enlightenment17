@@ -1,0 +1,36 @@
+#!/usr/bin/make -f
+
+unexport LANG
+
+CFLAGS += -fvisibility=hidden -O2
+LDFLAGS += -fvisibility=hidden
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	touch README
+	autopoint -f
+	aclocal -I m4
+	autoheader
+	autoconf
+	libtoolize --copy --automake
+	automake --add-missing --copy --gnu
+	dh_auto_configure -- \
+	--enable-ecore-fb \
+	--enable-ecore-evas-fb \
+	--disable-ecore-directfb \
+	--disable-ecore-evas-directfb \
+	--disable-rpath \
+	--enable-openssl \
+	--enable-glib
+
+override_dh_makeshlibs:
+	dh_makeshlibs -V
+
+override_dh_auto_clean:
+	-$(MAKE) maintainer-clean
+	rm -f README
+
+override_dh_strip:
+	dh_strip --dbg-package=libecore-dbg
