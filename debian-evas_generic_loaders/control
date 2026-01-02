@@ -5,7 +5,7 @@ Maintainer: Luis Felipe Strano Moraes <luis.strano@gmail.com>
 Build-Depends: cdbs, debhelper (>= 7), libtool, automake1.11, subversion,
  libeina-dev (>= 1.7.6), libeet-dev (>= 1.7.6), 
  libevas-dev (>= 1.7.6), libecore-dev (>= 1.7.6),
- libspectre-dev, libpoppler-dev, libgstreamer1.0-dev, libgstreamer-plugins-base1.0-dev, librsvg2-dev
+ libspectre-dev, libpoppler-dev, libpoppler-private-dev, libgstreamer1.0-dev, libgstreamer-plugins-base1.0-dev, librsvg2-dev
 Standards-Version: 3.8.3
 Homepage: http://www.enlightenment.org
 
