@@ -30,6 +30,8 @@ https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/eeze-1.7.10.tar.bz2
 https://ppa.launchpadcontent.net/efl/trunk/ubuntu/pool/main/t/terminology/terminology_0.3.0-1ppa2~saucy.tar.gz
 https://github.com/borisfaure/terminology/archive/refs/tags/v0.1.0.zip
 https://github.com/borisfaure/terminology/archive/refs/tags/v0.2.0.zip
+В случае сборки 0.2.0, нужно применить патчи из terminology-patches
+
 
 https://ppa.launchpadcontent.net/efl/trunk/ubuntu/pool/main/e/e17/e17_0.17.5-1ppa1~saucy.tar.gz
 https://archive.ubuntu.com/ubuntu/pool/universe/e/e17/e17_0.17.6-1.1.debian.tar.xz

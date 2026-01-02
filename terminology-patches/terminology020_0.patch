@@ -1,0 +1,33 @@
+diff --git a/configure.ac b/configure.ac
+index 2a5ab27..cd19a61 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -19,17 +19,17 @@ AM_PROG_CC_C_O
+ AC_C___ATTRIBUTE__
+ 
+ requirements="\
+-   elementary >= 1.7.99 \
+-   eina >= 1.7.99 \
+-   eet >= 1.7.99 \
+-   evas >= 1.7.99 \
+-   ecore >= 1.7.99 \
+-   edje >= 1.7.99 \
+-   emotion >= 1.7.99 \
+-   ecore-input >= 1.7.99 \
+-   ecore-imf >= 1.7.99 \
+-   ecore-imf-evas >= 1.7.99 \
+-   efreet >= 1.7.99
++   elementary >= 1.7.9 \
++   eina >= 1.7.9 \
++   eet >= 1.7.9 \
++   evas >= 1.7.9 \
++   ecore >= 1.7.9 \
++   edje >= 1.7.9 \
++   emotion >= 1.7.9 \
++   ecore-input >= 1.7.9 \
++   ecore-imf >= 1.7.9 \
++   ecore-imf-evas >= 1.7.9 \
++   efreet >= 1.7.9
+    "
+ 
+ PKG_CHECK_MODULES([TERMINOLOGY], [${requirements}])
