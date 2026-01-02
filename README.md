@@ -9,6 +9,7 @@
 - В ecore убрана жёсткая зависимость от libxp-dev
 - В ethumb исправлен "Source-Version" -> "source:Version"
 - Изменены compat с 6 до 7
+- Добавлен 02_fix.patch в evas-generic-loaders, который нужно включить в series, если будут проблемы сборки
 
 Ссылки скачивания исходников (всё проверено):
 
