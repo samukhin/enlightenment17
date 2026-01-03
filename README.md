@@ -14,6 +14,7 @@
 Ссылки скачивания исходников (всё проверено):
 
 https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/evas_generic_loaders-1.7.10.tar.bz2
+https://download.enlightenment.org/rel/libs/evas_generic_loaders/evas_generic_loaders-1.17.0.tar.xz
 https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/ethumb-1.7.10.tar.bz2
 https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/e_dbus-1.7.10.tar.bz2
 https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/emotion-1.7.10.tar.bz2
