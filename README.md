@@ -13,21 +13,21 @@
 
 Ссылки скачивания исходников (всё проверено):
 
-https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/evas_generic_loaders-1.7.10.tar.bz2
-https://download.enlightenment.org/rel/libs/evas_generic_loaders/evas_generic_loaders-1.17.0.tar.xz
-https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/ethumb-1.7.10.tar.bz2
-https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/e_dbus-1.7.10.tar.bz2
-https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/emotion-1.7.10.tar.bz2
-https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/elementary-1.7.10.tar.bz2
-https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/eio-1.7.10.tar.bz2
-https://bos.us.distfiles.macports.org/ecore/ecore-1.7.10.tar.bz2
-https://bos.us.distfiles.macports.org/evas/evas-1.7.10.tar.bz2
-https://bos.us.distfiles.macports.org/eet/eet-1.7.10.tar.bz2
-https://bos.us.distfiles.macports.org/eina/eina-1.7.10.tar.bz2
-https://bos.us.distfiles.macports.org/edje/edje-1.7.10.tar.bz2
-https://bos.us.distfiles.macports.org/efreet/efreet-1.7.10.tar.bz2
-https://bos.us.distfiles.macports.org/embryo/embryo-1.7.10.tar.bz2
-https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/eeze-1.7.10.tar.bz2
+wget https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/evas_generic_loaders-1.7.10.tar.bz2
+wget https://download.enlightenment.org/rel/libs/evas_generic_loaders/evas_generic_loaders-1.17.0.tar.xz
+wget https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/ethumb-1.7.10.tar.bz2
+wget https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/e_dbus-1.7.10.tar.bz2
+wget https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/emotion-1.7.10.tar.bz2
+wget https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/elementary-1.7.10.tar.bz2
+wget https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/eio-1.7.10.tar.bz2
+wget https://bos.us.distfiles.macports.org/ecore/ecore-1.7.10.tar.bz2
+wget https://bos.us.distfiles.macports.org/evas/evas-1.7.10.tar.bz2
+wget https://bos.us.distfiles.macports.org/eet/eet-1.7.10.tar.bz2
+wget https://bos.us.distfiles.macports.org/eina/eina-1.7.10.tar.bz2
+wget https://bos.us.distfiles.macports.org/edje/edje-1.7.10.tar.bz2
+wget https://bos.us.distfiles.macports.org/efreet/efreet-1.7.10.tar.bz2
+wget https://bos.us.distfiles.macports.org/embryo/embryo-1.7.10.tar.bz2
+wget https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/eeze-1.7.10.tar.bz2
 
 https://ppa.launchpadcontent.net/efl/trunk/ubuntu/pool/main/t/terminology/terminology_0.3.0-1ppa2~saucy.tar.gz
 https://github.com/borisfaure/terminology/archive/refs/tags/v0.1.0.zip
