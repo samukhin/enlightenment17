@@ -15,6 +15,9 @@
 
 wget https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/evas_generic_loaders-1.7.10.tar.bz2
 wget https://download.enlightenment.org/rel/libs/evas_generic_loaders/evas_generic_loaders-1.17.0.tar.xz
+В случае сборки 1.17.0, нужно применить патчи из evas_generic_loaders17-patches
+
+
 wget https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/ethumb-1.7.10.tar.bz2
 wget https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/e_dbus-1.7.10.tar.bz2
 wget https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/emotion-1.7.10.tar.bz2
@@ -32,7 +35,7 @@ wget https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/eeze-1.7.10.ta
 https://ppa.launchpadcontent.net/efl/trunk/ubuntu/pool/main/t/terminology/terminology_0.3.0-1ppa2~saucy.tar.gz
 https://github.com/borisfaure/terminology/archive/refs/tags/v0.1.0.zip
 https://github.com/borisfaure/terminology/archive/refs/tags/v0.2.0.zip
-В случае сборки 0.2.0, нужно применить патчи из terminology-patches
+В случае сборки 0.2.0, нужно применить патчи из terminology020-patches
 
 
 https://ppa.launchpadcontent.net/efl/trunk/ubuntu/pool/main/e/e17/e17_0.17.5-1ppa1~saucy.tar.gz
