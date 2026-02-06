@@ -47,7 +47,7 @@ https://distro.ibiblio.org/slitaz/sources/packages-cooking/e/enlightenment-0.17.
 
 Порядок сборки:
 1. eina - нужен для сборки eet
-2. eet
+2. eet - нужен для eio
 3. evas - нужен, чтобы сформировать ecore-evas, то есть для правильной сборки ecore
 4. ecore
 5. embryo
